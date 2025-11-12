@@ -7,10 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        surface: "#F7F6F4",
-        paper: "#FCFAF7",
-        primary: "#3D5A80",
-        accent: "#ECA189",
+        surface: "#F7F8FA", // off-white base
+        paper: "#FFFFFF",   // cards
+        primary: "#1B263B", // deep navy
+        accent: "#6CABDD",  // Man City blue
+        muted: "#E6DFCF",   // sand / optional neutral
       },
       borderRadius: {
         xl2: "1rem",
