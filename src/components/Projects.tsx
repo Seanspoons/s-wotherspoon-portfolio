@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import Section from "./Section";
 
 const PROJECTS = [
   {
@@ -47,17 +48,19 @@ const PROJECTS = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="space-y-4">
-      <div className="flex items-center justify-between gap-2">
-        <h2 className="text-lg font-semibold text-primary">Projects</h2>
-        <p className="text-xs text-slate-500">Recent &amp; selected work</p>
-      </div>
+    <Section>
+        <section id="projects" className="space-y-4">
+        <div className="flex items-center justify-between gap-2">
+            <h2 className="text-lg font-semibold text-primary">Projects</h2>
+            <p className="text-xs text-slate-500">Recent &amp; selected work</p>
+        </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
-        {PROJECTS.map((proj) => (
-          <ProjectCard key={proj.title} {...proj} />
-        ))}
-      </div>
-    </section>
+        <div className="grid gap-5 md:grid-cols-3">
+            {PROJECTS.map((proj) => (
+            <ProjectCard key={proj.title} {...proj} />
+            ))}
+        </div>
+        </section>
+    </Section>
   );
 }

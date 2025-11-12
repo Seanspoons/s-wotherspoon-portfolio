@@ -1,4 +1,5 @@
 import ExperienceCard from "./ExperienceCard";
+import Section from "./Section";
 
 const EXPERIENCE = [
   {
@@ -60,13 +61,15 @@ const EXPERIENCE = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="space-y-4">
-      <h2 className="text-lg font-semibold text-primary">Experience</h2>
-      <div className="space-y-3">
-        {EXPERIENCE.map((exp) => (
-          <ExperienceCard key={exp.title} {...exp} />
-        ))}
-      </div>
-    </section>
+    <Section>
+        <section id="experience" className="space-y-4">
+        <h2 className="text-lg font-semibold text-primary">Experience</h2>
+        <div className="space-y-3">
+            {EXPERIENCE.map((exp) => (
+            <ExperienceCard key={exp.title} {...exp} />
+            ))}
+        </div>
+        </section>
+    </Section>
   );
 }

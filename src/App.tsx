@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,9 +19,11 @@ function App() {
         <Education />
         <Contact />
       </main>
-      <footer className="py-6 text-center text-xs text-slate-400">
-        © {new Date().getFullYear()} Sean Wotherspoon
-      </footer>
+      <section className="text-center text-xs text-slate-500 py-6 px-4">
+        Currently creating Spark / Airflow pipelines at Samsung R&D and building Mealpository v2.  
+        Main stack: Spark • Airflow • React • Angular • Django • Supabase • AWS.
+      </section>
+      <Footer />
     </div>
   );
 }
