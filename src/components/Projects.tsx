@@ -25,6 +25,7 @@ const PROJECTS = [
     title: "Accessible predictive text editor",
     description:
         "Class project using Angular + Python to reduce keystrokes for users with motor disabilities through NLP-based word prediction.",
+    githubHref: "https://github.com/Seanspoons/TypeAid",
     tech: ["Angular", "Python", "NLP"],
     meta: "Academic • accessibility",
   },
@@ -33,6 +34,7 @@ const PROJECTS = [
     title: "CLI solver for N-Puzzle up to 7×7",
     description:
         "Java implementation of A* search with multiple heuristics and a command-line interface for algorithm testing.",
+    githubHref: "https://github.com/Seanspoons/N-Puzzle-Solver",
     tech: ["Java", "Algorithms", "A*"],
     meta: "Academic • algorithms",
   },
@@ -41,6 +43,7 @@ const PROJECTS = [
     title: "Business & review explorer",
     description:
         "Java Swing + MSSQL GUI enabling CRUD on Yelp data — users, reviews, and businesses — showcasing relational database design and SQL joins.",
+    githubHref: "https://github.com/Seanspoons/Yelp-Database-Application",
     tech: ["Java", "MSSQL", "Swing"],
     meta: "Academic • databases",
   },

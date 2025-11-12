@@ -9,16 +9,26 @@
   }
 }
 
-h2 {
-  position: relative;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
-h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 32px;
-  height: 2px;
-  background-color: var(--color-accent);
-  border-radius: 2px;
+
+@media (max-width: 639px) {
+  html { scroll-padding-top: 72px; }
+}
+
+@layer utilities {
+  .focus-visible-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2;
+  }
+}
+
+@layer components {
+  .btn-accent {
+    @apply rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white shadow-sm transition;
+  }
+  .btn-accent:hover {
+    box-shadow: 0 0 10px rgba(226,114,91,0.30); /* subtle accent glow */
+  }
 }

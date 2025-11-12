@@ -13,30 +13,30 @@ export default function Contact() {
             </div>
 
             <div className="mt-4 flex flex-wrap gap-3 text-sm">
-            <a
-                href="mailto:seangwotherspoon3@gmail.com"
-                className="rounded-lg bg-accent px-4 py-2 text-white"
-            >
-                Email
-            </a>
-            <a
-                href="https://linkedin.com/in/seanwotherspoon"
-                className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5"
-            >
-                LinkedIn
-            </a>
-            <a
-                href="https://github.com/Seanspoons"
-                className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5"
-            >
-                GitHub
-            </a>
-            <a
-                href="/Sean_Wotherspoon_Resume.pdf"
-                className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5"
-            >
-                Resume
-            </a>
+                <a
+                    href="mailto:seangwotherspoon3@gmail.com"
+                    className="btn-accent focus-visible-ring"
+                >
+                    Email
+                </a>
+                <a
+                    href="https://linkedin.com/in/seanwotherspoon"
+                    className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
+                >
+                    LinkedIn
+                </a>
+                <a
+                    href="https://github.com/Seanspoons"
+                    className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
+                >
+                    GitHub
+                </a>
+                <a
+                    href="/Sean_Wotherspoon_Resume.pdf"
+                    className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
+                >
+                    Resume
+                </a>
             </div>
         </div>
         </section>

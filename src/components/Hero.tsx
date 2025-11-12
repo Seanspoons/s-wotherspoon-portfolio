@@ -19,32 +19,29 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-3">
-            <a
-                href="#projects"
-                className="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-accent/90"
-            >
-                View projects
-            </a>
-            <a
-                href="mailto:seangwotherspoon3@gmail.com"
-                className="rounded-lg bg-paper px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/10 hover:bg-white"
-            >
-                Email me
-            </a>
-            <a
-                href="https://github.com/Seanspoons"
-                className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper"
-            >
-                GitHub
-            </a>
-            <a
-                href="/Sean_Wotherspoon_Resume.pdf"
-                className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Resume
-            </a>
+                <a href="#projects" className="btn-accent focus-visible-ring">
+                    View projects
+                </a>
+                <a
+                    href="mailto:seangwotherspoon3@gmail.com"
+                    className="rounded-lg bg-paper px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/10 hover:bg-white focus-visible-ring"
+                >
+                    Email me
+                </a>
+                <a
+                    href="https://github.com/Seanspoons"
+                    className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
+                >
+                    GitHub
+                </a>
+                <a
+                    href="/Sean_Wotherspoon_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
+                >
+                    Resume
+                </a>
             </div>
         </div>
 
