@@ -20,7 +20,7 @@ const EXPERIENCE = [
     period: "2025 – Present",
     location: "Port Coquitlam, BC",
     points: [
-      "Launched Mealpository (mealpository.com) — a production SaaS for recipe management and meal planning.",
+      "Launched Mealpository (mealpository.com), a production SaaS for recipe management and meal planning.",
       "Built an OCR-powered recipe ingestion pipeline and full AWS architecture using Fargate, RDS, and S3 with Terraform.",
       "Developed Angular front end and Django REST backend with Stripe-based subscriptions and automated billing tiers.",
       "Operate the platform solo, handling all design, engineering, and deployment processes.",

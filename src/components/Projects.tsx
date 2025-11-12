@@ -42,7 +42,7 @@ const PROJECTS = [
     eyebrow: "Yelp Database",
     title: "Business & review explorer",
     description:
-        "Java Swing + MSSQL GUI enabling CRUD on Yelp data — users, reviews, and businesses — showcasing relational database design and SQL joins.",
+        "Java Swing + MSSQL GUI enabling CRUD on Yelp data, users, reviews, and businesses, showcasing relational database design and SQL joins.",
     githubHref: "https://github.com/Seanspoons/Yelp-Database-Application",
     tech: ["Java", "MSSQL", "Swing"],
     meta: "Academic • databases",

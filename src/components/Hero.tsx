@@ -15,7 +15,7 @@ export default function Hero() {
 
             <p className="text-slate-600 leading-relaxed max-w-xl">
             At Samsung&nbsp;R&amp;D&nbsp;Canada building data pipelines, and on the side I’m developing 
-            Mealpository and KinDays&nbsp;— full-stack web products used by real people.
+            Mealpository and KinDays&nbsp;, full-stack web products used by real people.
             </p>
 
             <div className="flex flex-wrap gap-3">
