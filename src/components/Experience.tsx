@@ -9,7 +9,7 @@ const EXPERIENCE = [
     location: "Vancouver, BC",
     points: [
       "Own Spark/Airflow pipelines for Samsung Health analytics and log data — 5+ DAGs in production.",
-      "Designed and implemented raw and enriched Spark jobs for confirmed-layer Iceberg tables in S3 (AWS Glue Catalog + Athena).",
+      "Designed and implemented Spark jobs for raw, conformed and enriched-layer Iceberg tables in S3 (AWS Glue Catalog + Athena).",
       "Built dashboards tracking user data requests (deletion/access) and privacy metrics for the Samsung Health team.",
       "Collaborate with data analysts and scientists to support new metric pipelines and data quality initiatives.",
     ],
@@ -63,7 +63,11 @@ export default function Experience() {
   return (
     <Section>
         <section id="experience" className="space-y-4">
-        <h2 className="text-lg font-semibold text-primary">Experience</h2>
+        <h2 className="text-lg font-semibold text-primary relative
+            after:absolute after:left-0 after:-bottom-1
+            after:h-[2px] after:w-8 after:bg-accent after:rounded">
+            Experience
+        </h2>
         <div className="space-y-3">
             {EXPERIENCE.map((exp) => (
             <ExperienceCard key={exp.title} {...exp} />

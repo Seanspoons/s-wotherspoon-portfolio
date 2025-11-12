@@ -51,7 +51,11 @@ export default function Projects() {
     <Section>
         <section id="projects" className="space-y-4">
         <div className="flex items-center justify-between gap-2">
-            <h2 className="text-lg font-semibold text-primary">Projects</h2>
+            <h2 className="text-lg font-semibold text-primary relative
+                after:absolute after:left-0 after:-bottom-1
+                after:h-[2px] after:w-8 after:bg-accent after:rounded">
+                Projects
+            </h2>
             <p className="text-xs text-slate-500">Recent &amp; selected work</p>
         </div>
 
