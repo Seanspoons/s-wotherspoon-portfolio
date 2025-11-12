@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
+import About from "./components/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Header />
       <main className="mx-auto max-w-5xl px-4 py-10 space-y-10">
         <Hero />
+        <About />
         <Projects />
         <Experience />
         <Education />
