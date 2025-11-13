@@ -10,7 +10,7 @@ export default function Hero() {
             </p>
 
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">
-            Data&nbsp;&amp;&nbsp;Software Engineer building reliable, production-ready systems.
+            Data&nbsp;&amp;&nbsp;Software Engineer building reliable, production-ready systems
             </h1>
 
             <p className="text-slate-600 leading-relaxed max-w-xl">
