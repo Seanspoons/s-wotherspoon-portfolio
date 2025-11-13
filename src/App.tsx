@@ -13,18 +13,18 @@ import Now from "./components/Now";
 
 function App() {
   return (
-    <div className="min-h-screen bg-surface text-slate-900 dark:bg-[#050816] dark:text-slate-100">
+    <div className="min-h-screen bg-surface text-slate-900">
       <Header />
       <main className="mx-auto max-w-5xl px-4 py-10 space-y-10">
         <Hero />
         <About />
         <Now />
-        <TechStack />
         <Projects />
-        <Notes />
         <Experience />
+        <TechStack />
         <Education />
         <Certifications />
+        <Notes />
         <Contact />
       </main>
       <Footer />

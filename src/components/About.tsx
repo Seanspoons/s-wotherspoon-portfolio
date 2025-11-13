@@ -14,14 +14,14 @@ export default function About() {
 
         {/* one-sentence snapshot */}
         <p className="text-sm text-slate-500">
-          I like building useful systems that feel calm, reliable, and actually get used.
+          I like building useful systems that feel reliable and thoughtfully designed.
         </p>
 
         {/* main paragraph */}
         <p className="text-slate-600 leading-relaxed max-w-2xl">
           I work across the stack, from Spark/Airflow data pipelines to full web products like
-          Mealpository and KinDays. I enjoy taking projects from idea to production, handling
-          backend architecture, front-end polish, and the small details that make tools feel
+          Mealpository and KinDays. I enjoy taking projects from idea to production — backend
+          architecture, front-end polish, and the small details that make tools feel calm and
           dependable for real people.
         </p>
 
@@ -32,13 +32,13 @@ export default function About() {
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Reliability first
+              Build things that last
             </span>
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Calm, clear interfaces
+              Make it clear and usable
             </span>
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Built for real users
+              Solve real problems for real people
             </span>
           </div>
         </div>

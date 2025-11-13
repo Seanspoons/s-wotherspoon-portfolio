@@ -51,7 +51,7 @@ const EXPERIENCE = [
     title: "Web Developer",
     org: "Downhole Battery Inc.",
     period: "2021 – 2022",
-    location: "Vancouver, BC",
+    location: "Calgary, AB",
     points: [
       "Redesigned and rebuilt the company website using static HTML and JavaScript for improved clarity and responsiveness.",
       "Integrated contact and WhatsApp forms, modernizing the site’s communication flow.",
