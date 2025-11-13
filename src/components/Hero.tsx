@@ -5,10 +5,10 @@ export default function Hero() {
     <Section>
         <section className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] items-start">
         <div className="space-y-5">
-            <p className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-medium text-accent">
-                Data & Full-Stack Engineer • Vancouver
-                <span className="h-4 w-px bg-accent/40" />
-                AWS SAA-C03 certified
+            <p className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 rounded-full bg-accent/15 px-3 py-1 text-[11px] font-medium text-accent">
+                <span>Data & Full-Stack Engineer • Vancouver</span>
+                <span className="hidden sm:block h-4 w-px bg-accent/40"></span>
+                <span>AWS SAA-C03 certified</span>
             </p>
 
             <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">
