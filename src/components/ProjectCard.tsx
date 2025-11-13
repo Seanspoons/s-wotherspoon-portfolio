@@ -8,6 +8,7 @@ type ProjectCardProps = {
   githubHref?: string;
   tech?: string[];
   meta?: string;
+  imageSrc?: string;
 };
 
 export default function ProjectCard({
@@ -18,10 +19,23 @@ export default function ProjectCard({
   githubHref,
   tech,
   meta,
+  imageSrc
 }: ProjectCardProps) {
   return (
     <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
       <article className="rounded-xl bg-paper ring-1 ring-primary/5 p-5 sm:p-6 flex flex-col justify-between transition hover:shadow-md hover:ring-primary/10">
+        {/* Optional screenshot */}
+        {imageSrc && (
+          <div className="mb-3 overflow-hidden rounded-lg bg-surface">
+            <img
+              src={imageSrc}
+              alt={`${title} preview`}
+              className="w-full h-32 object-cover sm:h-36"
+            />
+          </div>
+        )}
+
+        {/* Top */}
         <div className="space-y-2">
           {eyebrow && (
             <p className="text-[11px] font-medium text-accent/90 tracking-wide">
@@ -31,7 +45,9 @@ export default function ProjectCard({
           <h3 className="text-base font-semibold text-primary">{title}</h3>
           {meta && <p className="text-[11px] text-slate-400">{meta}</p>}
           {description && (
-            <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+            <p className="text-sm text-slate-600 leading-relaxed">
+              {description}
+            </p>
           )}
         </div>
 
