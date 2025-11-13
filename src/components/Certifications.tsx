@@ -27,7 +27,7 @@ export default function Certifications() {
                         AWS Certified Solutions Architect — Associate (SAA-C03)
                         </p>
                         <p className="text-xs text-slate-500">
-                        Issued 2024 • Valid through 2027
+                        Issued 2025 • Valid through 2028
                         </p>
                     </div>
                     </div>
