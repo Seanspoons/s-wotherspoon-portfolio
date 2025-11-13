@@ -5,7 +5,7 @@ const EXPERIENCE = [
   {
     title: "Data & Software Engineer Co-op",
     org: "Samsung R&D Canada",
-    period: "Fall 2025",
+    period: "Jan 2025 - Present",
     location: "Vancouver, BC",
     points: [
       "Own Spark/Airflow pipelines for Samsung Health analytics and log data — 5+ DAGs in production.",
@@ -30,7 +30,7 @@ const EXPERIENCE = [
   {
     title: "Director of Technology",
     org: "SFU Open Source Development Club",
-    period: "2024 – 2025",
+    period: "2024 – Present",
     location: "Burnaby, BC",
     points: [
       "Oversee technical standards and code review processes for student-led open source projects.",

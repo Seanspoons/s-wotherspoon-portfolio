@@ -16,7 +16,7 @@ export default function Education() {
                 {/* header */}
                 <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3">
                 <h3 className="font-medium text-primary">Simon Fraser University</h3>
-                <p className="text-xs text-slate-500">Sept 2021 – May 2026</p>
+                <p className="text-xs text-slate-500">Sept 2021 – April 2027</p>
                 </div>
 
                 <p className="text-sm text-slate-600">
