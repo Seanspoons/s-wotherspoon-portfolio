@@ -16,7 +16,8 @@ export default function Now() {
         </p>
         <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
           <li>• Shipping data pipelines and metrics at Samsung R&amp;D (Samsung Health).</li>
-          <li>• Iterating on Mealpository v2 — smarter planning and a tighter UX.</li>
+          <li>• Designing and building Mealpository v2 as a mobile-first app.</li>
+          <li>• Monitoring HavenView in daily use and making small reliability improvements.</li>
           <li>• Watching how families use KinDays and planning small, focused improvements.</li>
           <li>• Finishing my Computing Science degree at SFU.</li>
         </ul>

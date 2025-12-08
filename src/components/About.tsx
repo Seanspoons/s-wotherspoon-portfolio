@@ -2,7 +2,7 @@ import Section from "./Section";
 
 export default function About() {
   return (
-    <Section>
+    <Section reveal="mount">
       <section id="about" className="space-y-4 scroll-mt-20">
         <h2
           className="text-lg font-semibold text-primary relative
@@ -20,9 +20,9 @@ export default function About() {
         {/* main paragraph */}
         <p className="text-slate-600 leading-relaxed max-w-2xl">
           I work across the stack, from Spark/Airflow data pipelines to full web products like
-          Mealpository and KinDays. I enjoy taking projects from idea to production — backend
-          architecture, front-end polish, and the small details that make tools feel calm and
-          dependable for real people.
+          Mealpository and KinDays, plus HavenView, a self-hosted home security hub on a Raspberry Pi 5.
+          I enjoy taking projects from idea to production, backend architecture, front-end polish,
+          and the small details that make tools feel calm and dependable for real people.
         </p>
 
         {/* principles */}

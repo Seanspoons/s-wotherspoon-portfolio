@@ -1,14 +1,24 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
+import NoteCard from "./NoteCard";
 
-type Note = {
+export type Note = {
+  slug: string;
   title: string;
   date: string;
   summary: string;
   href?: string;
 };
 
-const NOTES: Note[] = []; // empty for now
+const NOTES: Note[] = [
+  {
+    slug: "havenview-v1",
+    title: "HavenView v1 — self-hosted home security hub",
+    date: "Dec 7, 2025",
+    summary:
+      "How I designed and shipped HavenView v1: a private, Raspberry Pi–based home security hub with WebRTC live view and motion recording.",
+  },
+];
 
 export default function Notes() {
   const hasNotes = NOTES.length > 0;
@@ -25,7 +35,7 @@ export default function Notes() {
         </h2>
 
         <p className="text-sm text-slate-600">
-          Short write-ups on things I’ve built or learned. Hoping to post a few soon.
+          Short write-ups on things I’ve built or learned.
         </p>
 
         {/* If no notes → show empty state */}
@@ -42,24 +52,11 @@ export default function Notes() {
           <div className="grid gap-3 md:grid-cols-2">
             {NOTES.map((note) => (
               <motion.div
-                key={note.title}
+                key={note.slug}
                 whileHover={{ y: -3 }}
                 transition={{ duration: 0.2 }}
               >
-                <article className="rounded-xl bg-paper ring-1 ring-primary/5 p-4 sm:p-5 hover:shadow-md hover:ring-primary/10 transition">
-                  <p className="text-xs text-slate-400 mb-1">{note.date}</p>
-                  <h3 className="text-sm font-semibold text-primary">{note.title}</h3>
-                  <p className="text-sm text-slate-600 mt-1">{note.summary}</p>
-
-                  {note.href && note.href !== "#" && (
-                    <a
-                      href={note.href}
-                      className="mt-2 inline-flex text-sm text-accent hover:text-accent/80"
-                    >
-                      Read more →
-                    </a>
-                  )}
-                </article>
+                <NoteCard note={note} />
               </motion.div>
             ))}
           </div>
@@ -68,3 +65,5 @@ export default function Notes() {
     </Section>
   );
 }
+
+export { NOTES };

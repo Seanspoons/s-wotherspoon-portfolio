@@ -12,12 +12,12 @@ const STACK_SECTIONS = [
   },
   {
     label: "Backend & Data",
-    items: ["Django REST", "Supabase", "Spark", "Airflow", "PostgreSQL"],
+    items: ["FastAPI", "Django REST", "Supabase", "Spark", "Airflow", "PostgreSQL", "Redis"],
   },
   {
     label: "Cloud & Infra",
-    items: ["AWS (SAA-C03)", "Docker", "Terraform", "GitHub Actions"],
-  }
+    items: ["AWS (SAA-C03)", "Docker", "Terraform", "GitHub Actions", "Cloudflare Tunnels", "Raspberry Pi"],
+  },
 ];
 
 export default function TechStack() {

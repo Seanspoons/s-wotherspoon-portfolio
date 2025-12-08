@@ -3,6 +3,14 @@ import Section from "./Section";
 
 const PROJECTS = [
   {
+    eyebrow: "HavenView",
+    title: "Self-hosted home security hub",
+    description:
+      "Local-first home security system running on a Raspberry Pi 5 with Reolink PoE cameras, WebRTC live view, motion-based recording, and a FastAPI backend. Deployed on my home network and used daily by my family.",
+    tech: ["FastAPI", "React", "PostgreSQL", "Raspberry Pi"],
+    meta: "2025 • personal • production",
+  },
+  {
     eyebrow: "KinDays",
     title: "Private family dates app",
     description:
