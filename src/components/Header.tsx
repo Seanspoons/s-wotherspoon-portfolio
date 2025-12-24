@@ -1,10 +1,21 @@
+import { Link, useLocation } from "react-router-dom";
+
 export default function Header() {
+  const location = useLocation();
+
+  const handleLogoClick = () => {
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-10 border-b border-primary/5 bg-surface/80 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
         <div className="flex items-center gap-2">
-          <a
-            href="#top"
+          <Link
+            to="/"
+            onClick={handleLogoClick}
             className="flex items-center gap-2 group cursor-pointer focus-visible-ring rounded"
             aria-label="Back to top"
           >
@@ -22,7 +33,7 @@ export default function Header() {
             <span className="text-sm text-primary/90 group-hover:text-accent transition-colors">
               Sean Wotherspoon
             </span>
-          </a>
+          </Link>
         </div>
         <nav className="hidden gap-6 text-sm text-primary/70 md:flex">
           <a href="#projects" className="hover:text-accent">Projects</a>

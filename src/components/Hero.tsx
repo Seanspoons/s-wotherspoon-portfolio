@@ -16,9 +16,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-slate-600 leading-relaxed max-w-xl">
-            At Samsung&nbsp;R&amp;D&nbsp;Canada building data pipelines, and on the side I’m
-            developing Mealpository and KinDays, and recently shipped v1 of HavenView, a self-hosted
-            home security hub running on a Raspberry Pi 5.
+            Recently wrapped up a co-op at Samsung&nbsp;R&amp;D&nbsp;Canada, and on the side I’m
+            developing Mealpository and KinDays, plus HavenView, a self-hosted home security
+            hub running on a Raspberry Pi 5.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -55,19 +55,19 @@ export default function Hero() {
             <div>
               <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Now</p>
               <p className="text-slate-800">
-                Data &amp; Software Engineer Co-op — Samsung&nbsp;R&amp;D&nbsp;Canada
-              </p>
-              <p className="text-slate-500 text-xs">Data pipelines • analytics workflows</p>
-            </div>
-
-            <div>
-              <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Building</p>
-              <p className="text-slate-800">
-                Mealpository v2 — mobile-first meal planning app
+                Building Mealpository v2 — mobile-first meal planning app
               </p>
               <p className="text-slate-500 text-xs">
                 Mobile UX • offline-friendly flows • API-backed features
               </p>
+            </div>
+
+            <div>
+              <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Recently</p>
+              <p className="text-slate-800">
+                Completed Data Engineer Co-op — Samsung&nbsp;R&amp;D&nbsp;Canada
+              </p>
+              <p className="text-slate-500 text-xs">Spark • Airflow • AWS analytics</p>
             </div>
 
             <div>

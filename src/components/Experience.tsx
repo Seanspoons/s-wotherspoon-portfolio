@@ -3,18 +3,6 @@ import Section from "./Section";
 
 const EXPERIENCE = [
   {
-    title: "Data & Software Engineer Co-op",
-    org: "Samsung R&D Canada",
-    period: "Jan 2025 – Present",
-    location: "Vancouver, BC",
-    points: [
-      "Own Spark/Airflow pipelines for Samsung Health analytics and log data — 5+ DAGs in production.",
-      "Designed and implemented Spark jobs for raw, conformed, and enriched-layer Iceberg tables in S3 (AWS Glue Catalog + Athena).",
-      "Built dashboards for user data requests (deletion/access) and privacy metrics for the Samsung Health team.",
-      "Collaborate with data analysts and scientists to support new metric pipelines and data quality initiatives.",
-    ],
-  },
-  {
     title: "Founder & Full-Stack Engineer",
     org: "Mealpository",
     period: "2025 – Present",
@@ -26,6 +14,18 @@ const EXPERIENCE = [
       "Operate the platform end-to-end, handling design, engineering, and deployment workflows independently.",
     ],
     href: "https://mealpository.com"
+  },
+  {
+    title: "Data & Software Engineer Co-op",
+    org: "Samsung R&D Canada",
+    period: "Jan 2025 – December 2025",
+    location: "Vancouver, BC",
+    points: [
+      "Owned Spark/Airflow pipelines for Samsung Health analytics and log data — 5+ DAGs in production.",
+      "Designed and implemented Spark jobs for raw, conformed, and enriched-layer Iceberg tables in S3 (AWS Glue Catalog + Athena).",
+      "Built dashboards for user data requests (deletion/access) and privacy metrics for the Samsung Health team.",
+      "Collaborated with data analysts and scientists to support new metric pipelines and data quality initiatives.",
+    ],
   },
   {
     title: "Director of Technology",
