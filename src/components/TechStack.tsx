@@ -3,20 +3,36 @@ import Section from "./Section";
 
 const STACK_SECTIONS = [
   {
+    label: "Backend & Data",
+    items: [
+      "Go",
+      "Python",
+      "FastAPI",
+      "Django REST",
+      "Spark",
+      "Airflow",
+      "PostgreSQL",
+      "Redis"
+    ],
+  },
+  {
+    label: "Cloud & Infrastructure",
+    items: [
+      "AWS (SAA-C03)",
+      "Terraform",
+      "Docker",
+      "Prometheus",
+      "GitHub Actions",
+      "Cloudflare Tunnels"
+    ],
+  },
+  {
     label: "Languages",
-    items: ["Python", "Java", "Scala", "TypeScript", "SQL"],
+    items: ["Go", "Python", "Java", "Scala", "TypeScript", "SQL"],
   },
   {
     label: "Frontend",
     items: ["React", "Angular", "Next.js", "TailwindCSS"],
-  },
-  {
-    label: "Backend & Data",
-    items: ["FastAPI", "Django REST", "Supabase", "Spark", "Airflow", "PostgreSQL", "Redis"],
-  },
-  {
-    label: "Cloud & Infra",
-    items: ["AWS (SAA-C03)", "Docker", "Terraform", "GitHub Actions", "Cloudflare Tunnels", "Raspberry Pi"],
   },
 ];
 

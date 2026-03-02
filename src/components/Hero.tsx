@@ -6,19 +6,20 @@ export default function Hero() {
       <section className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] items-start">
         <div className="space-y-5">
           <p className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 rounded-full bg-accent/15 px-3 py-1 text-[11px] font-medium text-accent">
-            <span>Data & Full-Stack Engineer • Vancouver</span>
+            <span>Backend • Data • Infrastructure • Vancouver</span>
             <span className="hidden sm:block h-4 w-px bg-accent/40"></span>
             <span>AWS SAA-C03 certified</span>
           </p>
 
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">
-            Data&nbsp;&amp;&nbsp;Software Engineer building reliable, production-ready systems
+            Building scalable data pipelines and cloud-native systems
           </h1>
 
           <p className="text-slate-600 leading-relaxed max-w-xl">
-            Recently wrapped up a co-op at Samsung&nbsp;R&amp;D&nbsp;Canada, and on the side I’m
-            developing Mealpository and KinDays, plus HavenView, a self-hosted home security
-            hub running on a Raspberry Pi 5.
+            Completed a 12-month Data Engineering co-op at Samsung R&D Canada,
+            working on Spark & Airflow pipelines over large-scale health logging datasets.
+            I design privacy-conscious data systems, cloud infrastructure with Terraform, 
+            and backend services that run reliably in production.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -55,10 +56,10 @@ export default function Hero() {
             <div>
               <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Now</p>
               <p className="text-slate-800">
-                Building Mealpository v2 — mobile-first meal planning app
+                Building a personal streaming analytics platform (in progress)
               </p>
               <p className="text-slate-500 text-xs">
-                Mobile UX • offline-friendly flows • API-backed features
+                Event ingestion • windowed aggregation • replay • observability
               </p>
             </div>
 
@@ -73,16 +74,16 @@ export default function Hero() {
             <div>
               <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Recent</p>
               <p className="text-slate-800">
-                HavenView — self-hosted home security hub (Raspberry Pi 5)
+                HavenView — privacy-first home security (WebRTC • ONVIF • LAN-first)
               </p>
               <p className="text-slate-800">
-                KinDays &amp; MCBA — React • Supabase • Tailwind
+                Mealpository — cloud-native AWS app (Terraform • ECS/Fargate)
               </p>
             </div>
           </div>
 
           <p className="text-xs text-slate-400 pt-1">
-            Spark • Airflow • AWS • React • Angular • Django • Supabase • FastAPI • WebRTC • Docker • Raspberry&nbsp;Pi
+            Spark • Airflow • AWS • Terraform • Docker • FastAPI • WebRTC • PostgreSQL • Prometheus • React
           </p>
         </div>
       </section>

@@ -2,7 +2,7 @@ import Section from "./Section";
 
 export default function About() {
   return (
-    <Section reveal="mount">
+    <Section>
       <section id="about" className="space-y-4 scroll-mt-20">
         <h2
           className="text-lg font-semibold text-primary relative
@@ -14,15 +14,20 @@ export default function About() {
 
         {/* one-sentence snapshot */}
         <p className="text-sm text-slate-500">
-          I like building useful systems that feel reliable and thoughtfully designed.
+          I build backend systems and data pipelines that are reliable, scalable, and designed with long-term clarity in mind.
         </p>
 
         {/* main paragraph */}
         <p className="text-slate-600 leading-relaxed max-w-2xl">
-          I work across the stack, from Spark/Airflow data pipelines to full web products like
-          Mealpository and KinDays, plus HavenView, a self-hosted home security hub on a Raspberry Pi 5.
-          I enjoy taking projects from idea to production, backend architecture, front-end polish,
-          and the small details that make tools feel calm and dependable for real people.
+          My focus is on backend systems, data processing, and cloud infrastructure.
+          During my 12-month co-op at Samsung R&D, I worked on Spark and Airflow
+          pipelines powering privacy compliance reporting over large-scale health
+          logging datasets. Outside of work, I design and deploy cloud-native
+          applications with AWS and Terraform, and build systems-heavy projects
+          like HavenView — a local-first, real-time home security platform.
+          
+          I enjoy thinking through architecture decisions, reliability tradeoffs,
+          and how data flows through a system from ingestion to observable results.
         </p>
 
         {/* principles */}
@@ -32,13 +37,13 @@ export default function About() {
           </p>
           <div className="flex flex-wrap gap-2">
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Build things that last
+              Design for reliability first
             </span>
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Make it clear and usable
+              Understand the system end-to-end
             </span>
             <span className="rounded-full bg-surface px-3 py-1 text-xs text-primary/80">
-              Solve real problems for real people
+              Optimize for clarity over complexity
             </span>
           </div>
         </div>

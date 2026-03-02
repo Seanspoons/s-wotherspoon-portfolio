@@ -3,58 +3,46 @@ import Section from "./Section";
 
 const PROJECTS = [
   {
-    eyebrow: "HavenView",
-    title: "Self-hosted home security hub",
+    eyebrow: "Personal Analytics Platform (In Progress)",
+    title: "Streaming + batch analytics engine",
     description:
-      "Local-first home security system running on a Raspberry Pi 5 with Reolink PoE cameras, WebRTC live view, motion-based recording, and a FastAPI backend. Deployed on my home network and used daily by my family.",
-    tech: ["FastAPI", "React", "PostgreSQL", "Raspberry Pi"],
-    meta: "2025 • personal • production",
+      "Event-driven personal analytics system with ingestion API, windowed aggregations, replay support, and observability. Designed as a mini data processing engine inspired by Spark-style transformations.",
+    tech: ["Go", "PostgreSQL", "Docker", "Prometheus"],
+    meta: "2026 • backend • data systems",
   },
   {
-    eyebrow: "KinDays",
-    title: "Private family dates app",
+    eyebrow: "HavenView",
+    title: "Real-time home security system",
     description:
-        "Production React + Supabase web app for invite-only family spaces with OAuth authentication. Live at kindays.app, designed and maintained independently with a privacy-first approach.",
-    href: "https://kindays.app",
-    tech: ["React", "Supabase", "Tailwind"],
-    meta: "2025 • personal • production",
+      "Privacy-first home security platform integrating ONVIF cameras with WebRTC streaming, event buffering, retention logic, and LAN-first deployment. Migrated from Raspberry Pi to dedicated Ubuntu server.",
+    tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
+    meta: "2025 • systems • production",
+  },
+  {
+    eyebrow: "Mealpository",
+    title: "Cloud-native AWS application",
+    description:
+      "Full-stack web app deployed on AWS using ECS/Fargate, ALB, RDS, S3, WAF, and CloudFront. Infrastructure fully provisioned with Terraform and secured with JWT-based authentication.",
+    tech: ["Django", "Angular", "AWS", "Terraform"],
+    meta: "2025 • cloud • infrastructure",
+  },
+  {
+    eyebrow: "CMPT 201 Systems Programming",
+    title: "Custom Unix shell & memory allocator",
+    description:
+      "Implemented a Unix-like shell and a custom malloc/free memory allocator in C, focusing on process control, dynamic memory management, and low-level systems concepts.",
+    tech: ["C", "Process Control", "Memory Management"],
+    meta: "2026 • academic • systems",
   },
   {
     eyebrow: "MCBA League",
     title: "Basketball league platform",
     description:
-        "Full-stack site and admin dashboard for the MCBA league (6 teams, 24 players). Admins manage schedules, stats, and scores through a secure dashboard built on a Supabase backend, supporting a local community league.",
+      "Admin dashboard and league site supporting schedules, stats, and scoring workflows for a local community league.",
     href: "https://mcba-league.com",
     tech: ["React", "Supabase", "Tailwind"],
     meta: "2025 • community • production",
-  },
-  {
-    eyebrow: "TypeAid",
-    title: "Accessible predictive text editor",
-    description:
-        "Class project using Angular + Python to reduce keystrokes for users with motor disabilities through NLP-based word prediction.",
-    githubHref: "https://github.com/Seanspoons/TypeAid",
-    tech: ["Angular", "Python", "NLP"],
-    meta: "2024 • Academic • accessibility",
-  },
-  {
-    eyebrow: "Yelp Database",
-    title: "Business & review explorer",
-    description:
-        "Java Swing + MSSQL GUI enabling CRUD on Yelp data, users, reviews, and businesses, showcasing relational database design and SQL joins.",
-    githubHref: "https://github.com/Seanspoons/Yelp-Database-Application",
-    tech: ["Java", "MSSQL", "Swing"],
-    meta: "2023 • Academic • databases",
-  },
-  {
-    eyebrow: "N-Puzzle Solver",
-    title: "CLI solver for N-Puzzle up to 7×7",
-    description:
-        "Java implementation of A* search with multiple heuristics and a command-line interface for algorithm testing.",
-    githubHref: "https://github.com/Seanspoons/N-Puzzle-Solver",
-    tech: ["Java", "Algorithms", "A*"],
-    meta: "2023 • Academic • algorithms",
-  },
+  }
 ];
 
 export default function Projects() {

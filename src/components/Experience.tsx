@@ -3,28 +3,15 @@ import Section from "./Section";
 
 const EXPERIENCE = [
   {
-    title: "Founder & Full-Stack Engineer",
-    org: "Mealpository",
-    period: "2025 – Present",
-    location: "Port Coquitlam, BC",
-    points: [
-      "Launched Mealpository (mealpository.com), a production SaaS for recipe management and meal planning.",
-      "Built an OCR-powered recipe ingestion pipeline and full AWS architecture (Fargate, RDS, S3) provisioned with Terraform.",
-      "Develop the Angular front end and Django REST backend with Stripe-based subscriptions and automated billing tiers.",
-      "Operate the platform end-to-end, handling design, engineering, and deployment workflows independently.",
-    ],
-    href: "https://mealpository.com"
-  },
-  {
     title: "Data & Software Engineer Co-op",
-    org: "Samsung R&D Canada",
-    period: "Jan 2025 – December 2025",
+    org: "Samsung R&D",
+    period: "Jan 2025 – Dec 2025",
     location: "Vancouver, BC",
     points: [
-      "Owned Spark/Airflow pipelines for Samsung Health analytics and log data — 5+ DAGs in production.",
-      "Designed and implemented Spark jobs for raw, conformed, and enriched-layer Iceberg tables in S3 (AWS Glue Catalog + Athena).",
-      "Built dashboards for user data requests (deletion/access) and privacy metrics for the Samsung Health team.",
-      "Collaborated with data analysts and scientists to support new metric pipelines and data quality initiatives.",
+      "Designed and deployed Spark + Airflow pipelines for privacy compliance reporting (delete/access requests), generating de-identified datasets for analytics.",
+      "Implemented and productionized a conformed data model built on core Samsung Health logging tables (billions of total records), enabling daily downstream enrichment workflows.",
+      "Developed data generators for 133+ tables to simulate production workloads and validate ETL transformations in development environments.",
+      "Enabled Tableau-ready reporting tables and dashboards to improve visibility into processing timelines and compliance metrics.",
     ],
   },
   {
@@ -33,35 +20,25 @@ const EXPERIENCE = [
     period: "2024 – Present",
     location: "Burnaby, BC",
     points: [
-      "Oversee technical standards and code review processes for student-led open source projects.",
-      "Built and maintain the club website; assist members with React/Django workflows and version control best practices.",
+      "Oversaw technical direction of student-led projects, mentoring developers on architecture, Git workflows, and documentation practices.",
+      "Structured onboarding processes and technical documentation standards to improve project continuity and collaboration.",
     ],
   },
   {
-    title: "Software Engineer Intern",
+    title: "Full-Stack Engineer",
     org: "ViRA360",
-    period: "2023",
+    period: "2024 (8 weeks)",
     location: "Vancouver, BC",
     points: [
-      "Developed a customer-facing survey tool using Next.js and Django to measure client productivity and recommend paid services.",
-      "Delivered the feature end-to-end and shipped production code to live environments.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    org: "Downhole Battery Inc.",
-    period: "2021 – 2022",
-    location: "Calgary, AB",
-    points: [
-      "Redesigned and rebuilt the company website using static HTML and JavaScript for improved clarity and responsiveness.",
-      "Integrated contact and WhatsApp forms, modernizing the site’s communication flow.",
+      "Delivered a customer-facing survey tool to measure client productivity and recommend services.",
+      "Shipped production features using Next.js and Django in a fast, iterative client environment.",
     ],
   },
 ];
 
 export default function Experience() {
   return (
-    <Section>
+    <Section reveal="mount">
         <section id="experience" className="space-y-4">
         <h2 className="text-lg font-semibold text-primary relative
             after:absolute after:left-0 after:-bottom-1

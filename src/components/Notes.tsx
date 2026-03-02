@@ -18,6 +18,20 @@ const NOTES: Note[] = [
     summary:
       "How I designed and shipped HavenView v1: a private, Raspberry Pi–based home security hub with WebRTC live view and motion recording.",
   },
+//   {
+//     slug: "mealpository-architecture",
+//     title: "Mealpository — cloud architecture + Terraform migration",
+//     date: "Mar 2026",
+//     summary:
+//       "How I designed and deployed Mealpository on AWS (ECS/Fargate, ALB, WAF, CloudFront, RDS, S3) and migrated the stack to fully reproducible Terraform infrastructure.",
+//   },
+//   {
+//     slug: "personal-analytics-platform",
+//     title: "Personal Analytics Platform — streaming analytics engine (in progress)",
+//     date: "Mar 2026",
+//     summary:
+//       "Design notes for an event-driven analytics system: ingestion API, windowed aggregations, replay/backfill, and observability (Prometheus).",
+//   },
 ];
 
 export default function Notes() {
@@ -35,7 +49,7 @@ export default function Notes() {
         </h2>
 
         <p className="text-sm text-slate-600">
-          Short write-ups on things I’ve built or learned.
+          Write-ups on system design, data pipelines, and projects I’ve built — focused on tradeoffs and reliability.
         </p>
 
         {/* If no notes → show empty state */}

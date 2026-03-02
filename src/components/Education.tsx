@@ -28,12 +28,11 @@ export default function Education() {
                 {[
                     "Data Structures & Algorithms",
                     "Database Systems",
-                    "Web Development",
-                    "Software Practices",
-                    "UI Design",
-                    "Data Science",
                     "Computer Networking",
-                    "Biomedical Computing",
+                    "Operating Systems",
+                    "Systems Programming",
+                    "Software Engineering",
+                    "Data Science",
                 ].map((course) => (
                     <span
                     key={course}
