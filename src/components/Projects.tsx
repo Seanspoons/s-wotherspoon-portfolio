@@ -27,6 +27,16 @@ const PROJECTS = [
     meta: "2025 • cloud • infrastructure",
   },
   {
+    eyebrow: "Photo Watermarker",
+    title: "Privacy-first client-side image processing tool",
+    description:
+      "Browser-based photo watermarking and collage tool with HEIC conversion, responsive previews, and full-resolution export. Runs entirely client-side with no uploads or backend required.",
+    href: "https://photowatermarker.com",
+    githubHref: "https://github.com/Seanspoons/photo-watermarker",
+    tech: ["React", "TypeScript", "Vite", "Canvas API", "PWA"],
+    meta: "2025 • frontend product • shipped",
+  },
+  {
     eyebrow: "CMPT 201 Systems Programming",
     title: "Custom Unix shell & memory allocator",
     description:
