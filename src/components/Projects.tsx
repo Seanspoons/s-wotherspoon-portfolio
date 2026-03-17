@@ -29,8 +29,7 @@ const PROJECTS = [
   },
   {
     eyebrow: "Photo Watermarker",
-    title: "Photo Watermarker",
-    subtitle: "Privacy-first client-side image processing tool",
+    title: "Privacy-first client-side image processing tool",
     description:
       "A browser-based tool for watermarking photos and creating collages entirely client-side. Supports in-browser HEIC conversion, responsive previews, and full-resolution export, with no uploads or backend required.",
     href: "https://photowatermarker.com",
