@@ -39,10 +39,10 @@ const PROJECTS = [
   },
   {
     eyebrow: "CMPT 201 Systems Programming",
-    title: "Custom Unix shell & memory allocator",
+    title: "Unix shell, allocator, and MapReduce",
     description:
-      "Implemented a Unix-like shell and a custom malloc/free memory allocator in C, focusing on process control, dynamic memory management, and low-level systems concepts.",
-    tech: ["C", "Process Control", "Memory Management"],
+      "Implemented a Unix-like shell, a custom malloc/free memory allocator, and a MapReduce assignment in C, focusing on process control, dynamic memory management, and parallel systems concepts.",
+    tech: ["C", "Process Control", "Memory Management", "MapReduce"],
     meta: "2026 • academic • systems",
   },
   {
