@@ -23,6 +23,7 @@ const PROJECTS = [
     title: "Cloud-native AWS application",
     description:
       "Full-stack web app deployed on AWS using ECS/Fargate, ALB, RDS, S3, WAF, and CloudFront. Infrastructure fully provisioned with Terraform and secured with JWT-based authentication.",
+    href: "https://mealpository.com",
     tech: ["Django", "Angular", "AWS", "Terraform"],
     meta: "2025 • cloud • infrastructure",
   },
