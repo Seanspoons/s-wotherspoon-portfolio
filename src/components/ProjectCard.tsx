@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 type ProjectCardProps = {
   eyebrow?: string;
   title: string;
+  subtitle?: string;
   description?: string;
   href?: string;
   githubHref?: string;
@@ -14,6 +15,7 @@ type ProjectCardProps = {
 export default function ProjectCard({
   eyebrow,
   title,
+  subtitle,
   description,
   href,
   githubHref,
@@ -43,6 +45,9 @@ export default function ProjectCard({
             </p>
           )}
           <h3 className="text-base font-semibold text-primary">{title}</h3>
+          {subtitle && (
+            <p className="text-sm font-medium text-slate-500">{subtitle}</p>
+          )}
           {meta && <p className="text-[11px] text-slate-400">{meta}</p>}
           {description && (
             <p className="text-sm text-slate-600 leading-relaxed">

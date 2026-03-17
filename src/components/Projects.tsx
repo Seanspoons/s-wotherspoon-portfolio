@@ -28,13 +28,14 @@ const PROJECTS = [
   },
   {
     eyebrow: "Photo Watermarker",
-    title: "Privacy-first client-side image processing tool",
+    title: "Photo Watermarker",
+    subtitle: "Privacy-first client-side image processing tool",
     description:
-      "Browser-based photo watermarking and collage tool with HEIC conversion, responsive previews, and full-resolution export. Runs entirely client-side with no uploads or backend required.",
+      "A browser-based tool for watermarking photos and creating collages entirely client-side. Supports in-browser HEIC conversion, responsive previews, and full-resolution export, with no uploads or backend required.",
     href: "https://photowatermarker.com",
     githubHref: "https://github.com/Seanspoons/photo-watermarker",
-    tech: ["React", "TypeScript", "Vite", "Canvas API", "PWA"],
-    meta: "2025 • frontend product • shipped",
+    tech: ["React", "TypeScript", "Vite", "Canvas API", "heic2any", "PWA"],
+    meta: "2025 • shipped product • client-side pipeline",
   },
   {
     eyebrow: "CMPT 201 Systems Programming",
