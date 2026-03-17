@@ -56,9 +56,9 @@ export default function ProjectCard({
           )}
         </div>
 
-        <div className="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
+        <div className="mt-4 space-y-3">
           {tech && tech.length > 0 ? (
-            <div className="flex-1 min-w-0">
+            <div className="min-w-0">
               <div className="flex flex-wrap gap-2">
                 {tech.map((t) => (
                   <span
@@ -70,11 +70,9 @@ export default function ProjectCard({
                 ))}
               </div>
             </div>
-          ) : (
-            <div className="sm:flex-1" />
-          )}
+          ) : null}
 
-          <div className="sm:ml-auto shrink-0 flex items-center gap-3">
+          <div className="flex items-center justify-end gap-3">
             {githubHref && (
               <a
                 href={githubHref}
