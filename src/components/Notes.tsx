@@ -35,7 +35,7 @@ export default function Notes() {
         </h2>
 
         <p className="text-sm text-slate-600">
-          A project write-up focused on architecture, tradeoffs, and reliability.
+          A collection of notes on what I’m building, learning, and thinking through.
         </p>
 
         {/* If no notes → show empty state */}
