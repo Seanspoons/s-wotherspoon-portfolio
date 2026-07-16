@@ -135,7 +135,7 @@ export const projects: Project[] = [
     category: "Collaborative recipe and meal-planning platform",
     status: "Rebuild in progress",
     description:
-      "A multi-user food planning platform built around shared kitchens, recipe organization, pantry tracking, meal planning, grocery workflows, and controlled sharing.",
+      "A multi-user food planning platform built around shared kitchens, recipe organization, pantry tracking, meal planning, grocery workflows, and controlled sharing. The current rebuild is consolidating those capabilities into a cohesive V1.",
     href: "https://mealpository.com",
     tech: ["Python", "React", "PostgreSQL", "AWS", "Terraform"],
     meta: "2025–present • product • cloud infrastructure",
@@ -161,6 +161,7 @@ export const projects: Project[] = [
     status: "Completed",
     description:
       "A LAN-first home security system integrating ONVIF cameras, WebRTC live streaming, motion-triggered recording, event buffering, retention controls, and self-hosted deployment on a dedicated Ubuntu server.",
+    githubHref: "https://github.com/Seanspoons/havenview",
     tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
     meta: "2025 • systems • private production deployment",
     featured: true,

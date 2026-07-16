@@ -5,10 +5,14 @@ export default function HavenViewNote() {
       {/* Intro */}
       <section className="space-y-2">
         <p>
-          HavenView is a self-hosted home security hub running on a Raspberry Pi 5
-          in my house. It ingests RTSP streams from Reolink cameras, exposes a
-          low-latency WebRTC live view, and records motion events to an external SSD
+          HavenView v1 was a self-hosted home security hub running on a Raspberry Pi 5.
+          It ingested RTSP streams from Reolink cameras, exposed a
+          low-latency WebRTC live view, and recorded motion events to an external SSD
           via a FastAPI backend and a React frontend.
+        </p>
+        <p className="rounded-lg bg-surface px-4 py-3 text-xs text-slate-600 ring-1 ring-primary/5">
+          This article documents the original v1 deployment. The completed system
+          has since moved from the Raspberry Pi to a dedicated Ubuntu server.
         </p>
         <p>
           The goal was to give my family a camera system that we control end to end:
@@ -28,7 +32,7 @@ export default function HavenViewNote() {
           System architecture
         </h2>
         <p>
-          At a high level, HavenView is a small distributed system: a PWA front-end,
+          At a high level, HavenView v1 was a small distributed system: a PWA front-end,
           a Pi hub on the home LAN, and a minimal set of cloud services used for
           auth, tunnelling, and WebRTC relay when clients are off-network.
         </p>
@@ -177,10 +181,10 @@ export default function HavenViewNote() {
       </section>
 
 
-      {/* What I'd like to improve */}
+      {/* Directions considered after v1 */}
       <section className="space-y-2">
         <h2 className="text-sm font-semibold text-primary">
-          What I&apos;d like to improve
+          Directions considered after v1
         </h2>
         <ul className="list-disc list-inside space-y-1">
           <li>

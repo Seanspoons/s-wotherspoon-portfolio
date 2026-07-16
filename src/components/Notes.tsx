@@ -13,10 +13,10 @@ export type Note = {
 const NOTES: Note[] = [
   {
     slug: "havenview-v1",
-    title: "HavenView v1 — self-hosted home security hub",
+    title: "HavenView v1 — Raspberry Pi home security hub",
     date: "Dec 7, 2025",
     summary:
-      "How I designed and shipped HavenView v1: a private, Raspberry Pi–based home security hub with WebRTC live view and motion recording.",
+      "A look back at HavenView’s original Raspberry Pi architecture, before the production system moved to a dedicated Ubuntu server.",
   },
 ];
 
@@ -35,7 +35,7 @@ export default function Notes() {
         </h2>
 
         <p className="text-sm text-slate-600">
-          Write-ups on system design, data pipelines, and projects I’ve built — focused on tradeoffs and reliability.
+          A project write-up focused on architecture, tradeoffs, and reliability.
         </p>
 
         {/* If no notes → show empty state */}
