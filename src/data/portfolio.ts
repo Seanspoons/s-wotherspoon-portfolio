@@ -279,18 +279,6 @@ export const projects: Project[] = [
     group: "archive",
   },
   {
-    id: "makerventory",
-    title: "Makerventory",
-    category: "3D printing inventory and operations manager",
-    status: "In development",
-    description:
-      "An operations workspace for printers, hardware assignments, filament, consumables, maintenance, imports, and purchase planning.",
-    githubHref: "https://github.com/Seanspoons/makerventory",
-    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    meta: "2026 • product • operations",
-    group: "archive",
-  },
-  {
     id: "kindays",
     title: "KinDays",
     category: "Private shared family calendar",
@@ -300,7 +288,7 @@ export const projects: Project[] = [
     href: "https://kindays.app",
     tech: ["React", "TypeScript", "Supabase"],
     meta: "2025 • family utility • production",
-    group: "archive",
+    group: "additional",
   },
   {
     id: "portfolio",
