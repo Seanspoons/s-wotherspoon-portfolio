@@ -36,7 +36,7 @@ function HomePage() {
     }
   }, [location, navigate]);
   return (
-    <main className="mx-auto max-w-5xl px-4 py-10 space-y-10">
+    <main id="main-content" className="mx-auto max-w-5xl px-4 py-10 space-y-10">
       <Hero />
       <Experience />
       <Projects />
@@ -54,6 +54,7 @@ function HomePage() {
 function App() {
   return (
     <div className="min-h-screen bg-surface text-slate-900">
+      <a href="#main-content" className="skip-link">Skip to content</a>
       <Header />
       <ScrollToTop />
       <Routes>

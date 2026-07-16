@@ -9,9 +9,20 @@ export default function Header() {
     }
   };
 
+  const navigation = [
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
+    { href: "#about", label: "About" },
+    { href: "#education", label: "Education" },
+    { href: "#contact", label: "Contact" },
+  ];
+  const navigationHref = (href: string) =>
+    location.pathname === "/" ? href : `/${href}`;
+
   return (
     <header className="sticky top-0 z-10 border-b border-primary/5 bg-surface/80 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3">
+      <div className="mx-auto max-w-5xl px-4">
+        <div className="flex items-center justify-between py-3">
         <div className="flex items-center gap-2">
           <Link
             to="/"
@@ -35,11 +46,21 @@ export default function Header() {
             </span>
           </Link>
         </div>
-        <nav className="hidden gap-6 text-sm text-primary/70 md:flex">
-          <a href="#projects" className="hover:text-accent">Projects</a>
-          <a href="#experience" className="hover:text-accent">Experience</a>
-          <a href="#education" className="hover:text-accent">Education</a>
-          <a href="#contact" className="hover:text-accent">Contact</a>
+        <nav aria-label="Primary navigation" className="hidden gap-6 text-sm text-primary/70 md:flex">
+          {navigation.map((item) => (
+            <a key={item.href} href={navigationHref(item.href)} className="rounded hover:text-accent focus-visible-ring">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        </div>
+
+        <nav aria-label="Mobile navigation" className="flex gap-4 overflow-x-auto pb-2 text-xs text-primary/70 md:hidden">
+          {navigation.map((item) => (
+            <a key={item.href} href={navigationHref(item.href)} className="shrink-0 rounded hover:text-accent focus-visible-ring">
+              {item.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>

@@ -46,7 +46,7 @@ export const profile = {
   location: "Metro Vancouver, BC",
   email: "seangwotherspoon3@gmail.com",
   github: "https://github.com/Seanspoons",
-  linkedIn: "https://linkedin.com/in/seanwotherspoon",
+  linkedIn: "https://linkedin.com/in/sean-wotherspoon",
   resume: "/Sean_Wotherspoon_Resume.pdf",
   headline:
     "Building reliable backend systems, cloud infrastructure, and production software",
@@ -157,7 +157,6 @@ export const projects: Project[] = [
     description:
       "A monitoring platform for applications and services with scheduled health checks, incident lifecycle management, email and Discord alerts, public status pages, and documentation. Operational safeguards include rate limits, SSRF protection, and encrypted check credentials.",
     href: "https://stackpulsehq.dev",
-    githubHref: "https://github.com/Seanspoons/stack-pulse",
     tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"],
     meta: "2026 • backend • observability",
     group: "featured",
@@ -169,7 +168,6 @@ export const projects: Project[] = [
     status: "Completed",
     description:
       "A LAN-first home security system integrating ONVIF cameras, WebRTC live streaming, motion-triggered recording, event buffering, retention controls, and self-hosted deployment on a dedicated Ubuntu server.",
-    githubHref: "https://github.com/Seanspoons/havenview",
     tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
     meta: "2025 • systems • private production deployment",
     group: "featured",
@@ -218,7 +216,6 @@ export const projects: Project[] = [
     status: "In development",
     description:
       "An iPhone and Apple Watch product for recording and importing running workouts, then shaping them into training signals, trends, and prediction inputs through a shared backend and data model.",
-    githubHref: "https://github.com/Seanspoons/runlytical",
     tech: ["Swift", "HealthKit", "watchOS", "TypeScript", "PostgreSQL"],
     meta: "2026 • iOS • data product",
     group: "additional",
@@ -242,7 +239,6 @@ export const projects: Project[] = [
     description:
       "An admin dashboard and public league site supporting schedules, standings, statistics, and scoring workflows for a local community league.",
     href: "https://mcba-league.com",
-    githubHref: "https://github.com/Seanspoons/mcba",
     tech: ["React", "Supabase", "Tailwind CSS"],
     meta: "2025 • community • production",
     group: "additional",
@@ -254,7 +250,6 @@ export const projects: Project[] = [
     status: "In development",
     description:
       "A class-based study system that turns source material into durable Learn and Practice artifacts, repeatable sessions, and progress history.",
-    githubHref: "https://github.com/Seanspoons/studypreplab",
     tech: ["React", "Fastify", "PostgreSQL", "Drizzle"],
     meta: "2026 • education • backend",
     group: "archive",
@@ -303,7 +298,6 @@ export const projects: Project[] = [
     description:
       "A shared family space for birthdays, anniversaries, memorials, milestones, and date calculations.",
     href: "https://kindays.app",
-    githubHref: "https://github.com/Seanspoons/kindays",
     tech: ["React", "TypeScript", "Supabase"],
     meta: "2025 • family utility • production",
     group: "archive",

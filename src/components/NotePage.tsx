@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { NOTES } from "./Notes";
 import HavenViewNote from "./notes/HavenViewNote";
 
@@ -13,6 +13,22 @@ export default function NotePage() {
 
   const meta = NOTES.find((n) => n.slug === slug);
   const content = slug ? NOTE_COMPONENTS[slug] : null;
+
+  useEffect(() => {
+    if (!meta) return;
+
+    const previousTitle = document.title;
+    const description = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    const previousDescription = description?.content;
+
+    document.title = `${meta.title} | Sean Wotherspoon`;
+    if (description) description.content = meta.summary;
+
+    return () => {
+      document.title = previousTitle;
+      if (description && previousDescription) description.content = previousDescription;
+    };
+  }, [meta]);
   
   const handleBack = () => {
     navigate("/", { state: { scrollTo: "notes" } });
