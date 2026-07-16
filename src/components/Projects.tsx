@@ -3,8 +3,9 @@ import Section from "./Section";
 import { projects } from "../data/portfolio";
 
 export default function Projects() {
-  const featuredProjects = projects.filter((project) => project.featured);
-  const additionalProjects = projects.filter((project) => !project.featured);
+  const featuredProjects = projects.filter((project) => project.group === "featured");
+  const additionalProjects = projects.filter((project) => project.group === "additional");
+  const archivedProjects = projects.filter((project) => project.group === "archive");
 
   return (
     <Section>
@@ -27,12 +28,26 @@ export default function Projects() {
 
         <div className="space-y-3">
           <h3 className="text-sm font-medium text-primary">Additional projects</h3>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {additionalProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </div>
+
+        <details className="group rounded-xl bg-paper ring-1 ring-primary/5">
+          <summary className="cursor-pointer list-none rounded-xl px-5 py-4 text-sm font-medium text-primary focus-visible-ring">
+            <h3 className="flex items-center justify-between gap-3 text-sm font-medium">
+              More work
+              <span aria-hidden="true" className="text-accent transition-transform group-open:rotate-45">+</span>
+            </h3>
+          </summary>
+          <div className="grid gap-4 border-t border-primary/5 p-4 sm:grid-cols-2 lg:grid-cols-3">
+            {archivedProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} compact />
+            ))}
+          </div>
+        </details>
       </section>
     </Section>
   );

@@ -18,7 +18,10 @@ export type ProjectStatus =
   | "Production"
   | "Maintained"
   | "Completed"
-  | "Internal tool";
+  | "Internal tool"
+  | "In development";
+
+export type ProjectGroup = "featured" | "additional" | "archive";
 
 export type Project = {
   id: string;
@@ -28,7 +31,7 @@ export type Project = {
   description: string;
   tech: string[];
   meta: string;
-  featured: boolean;
+  group: ProjectGroup;
   href?: string;
   githubHref?: string;
 };
@@ -127,7 +130,7 @@ export const projects: Project[] = [
     href: "https://harbourbudget.com",
     tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Plaid"],
     meta: "2026–present • product • private beta",
-    featured: true,
+    group: "featured",
   },
   {
     id: "mealpository",
@@ -139,7 +142,7 @@ export const projects: Project[] = [
     href: "https://mealpository.com",
     tech: ["Python", "React", "PostgreSQL", "AWS", "Terraform"],
     meta: "2025–present • product • cloud infrastructure",
-    featured: true,
+    group: "featured",
   },
   {
     id: "stackpulse",
@@ -152,7 +155,7 @@ export const projects: Project[] = [
     githubHref: "https://github.com/Seanspoons/stack-pulse",
     tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"],
     meta: "2026 • backend • observability",
-    featured: true,
+    group: "featured",
   },
   {
     id: "havenview",
@@ -164,7 +167,31 @@ export const projects: Project[] = [
     githubHref: "https://github.com/Seanspoons/havenview",
     tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
     meta: "2025 • systems • private production deployment",
-    featured: true,
+    group: "featured",
+  },
+  {
+    id: "waypoint",
+    title: "Waypoint",
+    category: "Lightweight CRM and consulting operations platform",
+    status: "Internal tool",
+    description:
+      "A private consulting operations system for companies, contacts, opportunities, pipelines, next actions, calendar workflows, and relationship history. It also includes global search and keyboard navigation.",
+    tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Google Calendar"],
+    meta: "2026 • Alderwood Software • internal operations",
+    group: "additional",
+  },
+  {
+    id: "simple-pdf-tools",
+    title: "Simple PDF Tools",
+    category: "Privacy-first browser-based PDF utilities",
+    status: "Production",
+    description:
+      "Browser-side PDF tools for merging documents and splitting by selected pages, individual pages, or ranges. Previewing and exports stay on the device with no upload or account required.",
+    href: "https://simplepdftools.app",
+    githubHref: "https://github.com/Seanspoons/simple-pdf-tools",
+    tech: ["React", "TypeScript", "pdf-lib", "PDF.js", "PWA"],
+    meta: "2026 • browser-side processing",
+    group: "additional",
   },
   {
     id: "simple-photo-tools",
@@ -177,7 +204,19 @@ export const projects: Project[] = [
     githubHref: "https://github.com/Seanspoons/simple-photo-tools",
     tech: ["React", "TypeScript", "Canvas API", "PWA"],
     meta: "2025 • browser-side processing",
-    featured: false,
+    group: "additional",
+  },
+  {
+    id: "runlytical",
+    title: "Runlytical",
+    category: "Running training insights platform",
+    status: "In development",
+    description:
+      "An iPhone and Apple Watch product for recording and importing running workouts, then shaping them into training signals, trends, and prediction inputs through a shared backend and data model.",
+    githubHref: "https://github.com/Seanspoons/runlytical",
+    tech: ["Swift", "HealthKit", "watchOS", "TypeScript", "PostgreSQL"],
+    meta: "2026 • iOS • data product",
+    group: "additional",
   },
   {
     id: "cmpt-201-systems",
@@ -188,7 +227,7 @@ export const projects: Project[] = [
       "A Unix-like shell, custom malloc/free memory allocator, and MapReduce system built in C, covering process control, dynamic memory management, and parallel systems concepts.",
     tech: ["C", "Process Control", "Memory Management", "MapReduce"],
     meta: "2026 • academic • systems",
-    featured: false,
+    group: "archive",
   },
   {
     id: "mcba-league",
@@ -201,7 +240,81 @@ export const projects: Project[] = [
     githubHref: "https://github.com/Seanspoons/mcba",
     tech: ["React", "Supabase", "Tailwind CSS"],
     meta: "2025 • community • production",
-    featured: false,
+    group: "additional",
+  },
+  {
+    id: "studypreplab",
+    title: "StudyPrepLab",
+    category: "Structured study platform",
+    status: "In development",
+    description:
+      "A class-based study system that turns source material into durable Learn and Practice artifacts, repeatable sessions, and progress history.",
+    githubHref: "https://github.com/Seanspoons/studypreplab",
+    tech: ["React", "Fastify", "PostgreSQL", "Drizzle"],
+    meta: "2026 • education • backend",
+    group: "archive",
+  },
+  {
+    id: "cmpt-263-exam-trainer",
+    title: "CMPT 263 Exam Trainer",
+    category: "Human-computer interaction study tool",
+    status: "Completed",
+    description:
+      "A focused final-exam practice application for SFU Human-Centered Computing course material.",
+    githubHref: "https://github.com/Seanspoons/cmpt263-exam-trainer",
+    tech: ["React", "TypeScript", "Vite"],
+    meta: "2026 • academic • learning tool",
+    group: "archive",
+  },
+  {
+    id: "cmpt-201-exam-trainer",
+    title: "CMPT 201 Exam Trainer",
+    category: "Systems programming study tool",
+    status: "Completed",
+    description:
+      "An interactive trainer spanning 20 lecture-aligned systems topics with generated drills, immediate feedback, and step-by-step explanations.",
+    githubHref: "https://github.com/Seanspoons/cmpt201-exam-trainer",
+    tech: ["React", "TypeScript", "Vite"],
+    meta: "2026 • academic • learning tool",
+    group: "archive",
+  },
+  {
+    id: "makerventory",
+    title: "Makerventory",
+    category: "3D printing inventory and operations manager",
+    status: "In development",
+    description:
+      "An operations workspace for printers, hardware assignments, filament, consumables, maintenance, imports, and purchase planning.",
+    githubHref: "https://github.com/Seanspoons/makerventory",
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
+    meta: "2026 • product • operations",
+    group: "archive",
+  },
+  {
+    id: "kindays",
+    title: "KinDays",
+    category: "Private shared family calendar",
+    status: "Production",
+    description:
+      "A shared family space for birthdays, anniversaries, memorials, milestones, and date calculations.",
+    href: "https://kindays.app",
+    githubHref: "https://github.com/Seanspoons/kindays",
+    tech: ["React", "TypeScript", "Supabase"],
+    meta: "2025 • family utility • production",
+    group: "archive",
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio",
+    category: "Personal portfolio and technical writing",
+    status: "Production",
+    description:
+      "This responsive portfolio, including the project archive and a long-form HavenView architecture note.",
+    href: "https://seanwotherspoon.ca",
+    githubHref: "https://github.com/Seanspoons/s-wotherspoon-portfolio",
+    tech: ["React", "TypeScript", "Tailwind CSS"],
+    meta: "2025–present • web • production",
+    group: "archive",
   },
 ];
 

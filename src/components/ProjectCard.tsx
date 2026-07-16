@@ -4,9 +4,10 @@ import type { Project } from "../data/portfolio";
 type ProjectCardProps = {
   project: Project;
   featured?: boolean;
+  compact?: boolean;
 };
 
-export default function ProjectCard({ project, featured = false }: ProjectCardProps) {
+export default function ProjectCard({ project, featured = false, compact = false }: ProjectCardProps) {
   const { title, category, status, description, href, githubHref, tech, meta } = project;
 
   return (
@@ -29,11 +30,13 @@ export default function ProjectCard({ project, featured = false }: ProjectCardPr
             {title}
           </h4>
           <p className="text-[11px] text-slate-400">{meta}</p>
-          <p className="text-sm text-slate-600 leading-relaxed">{description}</p>
+          <p className={`text-sm text-slate-600 leading-relaxed ${compact ? "line-clamp-3" : ""}`}>
+            {description}
+          </p>
         </div>
 
         <div className="mt-4 space-y-3">
-          <div className="flex flex-wrap gap-2">
+          <div className={`flex flex-wrap gap-2 ${compact ? "hidden" : ""}`}>
             {tech.map((item) => (
               <span
                 key={item}
