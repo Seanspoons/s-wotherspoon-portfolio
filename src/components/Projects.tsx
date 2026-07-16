@@ -37,15 +37,18 @@ export default function Projects() {
 
         <details className="group rounded-xl bg-paper ring-1 ring-primary/5">
           <summary className="cursor-pointer list-none rounded-xl px-5 py-4 text-sm font-medium text-primary focus-visible-ring">
-            <h3 className="flex items-center justify-between gap-3 text-sm font-medium">
+            <span className="flex items-center justify-between gap-3 text-sm font-medium">
               More work
               <span aria-hidden="true" className="text-accent transition-transform group-open:rotate-45">+</span>
-            </h3>
+            </span>
           </summary>
-          <div className="grid gap-4 border-t border-primary/5 p-4 sm:grid-cols-2 lg:grid-cols-3">
-            {archivedProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} compact />
-            ))}
+          <div className="border-t border-primary/5 p-4">
+            <h3 className="sr-only">More work projects</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {archivedProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} compact />
+              ))}
+            </div>
           </div>
         </details>
       </section>

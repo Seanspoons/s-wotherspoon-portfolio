@@ -12,7 +12,7 @@ const baseTransition: Transition = {
 
 export default function Section({ children, reveal = "scroll" }: SectionProps) {
   return (
-    <motion.section
+    <motion.div
       initial={{ opacity: 0, y: 24 }}
       animate={reveal === "mount" ? { opacity: 1, y: 0 } : undefined}
       whileInView={reveal === "scroll" ? { opacity: 1, y: 0 } : undefined}
@@ -21,6 +21,6 @@ export default function Section({ children, reveal = "scroll" }: SectionProps) {
       className="space-y-4"
     >
       {children}
-    </motion.section>
+    </motion.div>
   );
 }

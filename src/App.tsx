@@ -14,6 +14,7 @@ import Now from "./components/Now";
 import NotePage from "./components/NotePage";
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
+import { MotionConfig } from "framer-motion";
 
 function HomePage() {
   const location = useLocation();
@@ -53,16 +54,18 @@ function HomePage() {
 
 function App() {
   return (
-    <div className="min-h-screen bg-surface text-slate-900">
-      <a href="#main-content" className="skip-link">Skip to content</a>
-      <Header />
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/notes/:slug" element={<NotePage />} />
-      </Routes>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div className="min-h-screen bg-surface text-slate-900">
+        <a href="#main-content" className="skip-link">Skip to content</a>
+        <Header />
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/notes/:slug" element={<NotePage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </MotionConfig>
   );
 }
 

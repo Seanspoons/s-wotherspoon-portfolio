@@ -55,7 +55,7 @@ export default function Header() {
         </nav>
         </div>
 
-        <nav aria-label="Mobile navigation" className="flex gap-4 overflow-x-auto pb-2 text-xs text-primary/70 md:hidden">
+        <nav aria-label="Mobile navigation" className="flex items-center justify-between gap-2 pb-2 text-xs text-primary/70 md:hidden">
           {navigation.map((item) => (
             <a key={item.href} href={navigationHref(item.href)} className="shrink-0 rounded hover:text-accent focus-visible-ring">
               {item.label}

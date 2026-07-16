@@ -35,7 +35,7 @@ export default function NotePage() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-10 space-y-4">
+    <main id="main-content" className="mx-auto max-w-5xl px-4 py-10 space-y-4">
       <button
         type="button"
         onClick={handleBack}
@@ -66,6 +66,6 @@ export default function NotePage() {
           </article>
         </section>
       )}
-    </div>
+    </main>
   );
 }
