@@ -118,6 +118,18 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "harbour",
+    title: "Harbour",
+    category: "Personal budgeting and financial clarity platform",
+    status: "Private beta",
+    description:
+      "A budgeting application that connects financial accounts, brings new transactions into a review workflow, and helps users maintain an envelope-based plan grounded in what actually happened.",
+    href: "https://harbourbudget.com",
+    tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Plaid"],
+    meta: "2026–present • product • private beta",
+    featured: true,
+  },
+  {
     id: "mealpository",
     title: "Mealpository",
     category: "Collaborative recipe and meal-planning platform",
@@ -127,6 +139,19 @@ export const projects: Project[] = [
     href: "https://mealpository.com",
     tech: ["Python", "React", "PostgreSQL", "AWS", "Terraform"],
     meta: "2025–present • product • cloud infrastructure",
+    featured: true,
+  },
+  {
+    id: "stackpulse",
+    title: "StackPulse",
+    category: "Application monitoring and incident management platform",
+    status: "Production",
+    description:
+      "A monitoring platform for applications and services with scheduled health checks, incident lifecycle management, email and Discord alerts, public status pages, and documentation. Operational safeguards include rate limits, SSRF protection, and encrypted check credentials.",
+    href: "https://stackpulsehq.dev",
+    githubHref: "https://github.com/Seanspoons/stack-pulse",
+    tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"],
+    meta: "2026 • backend • observability",
     featured: true,
   },
   {
