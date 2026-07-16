@@ -12,6 +12,27 @@ export type Experience = {
   points: string[];
 };
 
+export type ProjectStatus =
+  | "Private beta"
+  | "Rebuild in progress"
+  | "Production"
+  | "Maintained"
+  | "Completed"
+  | "Internal tool";
+
+export type Project = {
+  id: string;
+  title: string;
+  category: string;
+  status: ProjectStatus;
+  description: string;
+  tech: string[];
+  meta: string;
+  featured: boolean;
+  href?: string;
+  githubHref?: string;
+};
+
 export const profile = {
   name: "Sean Wotherspoon",
   location: "Metro Vancouver, BC",
@@ -92,6 +113,69 @@ export const experiences: Experience[] = [
       "Delivered a customer-facing survey tool to measure client productivity and recommend services.",
       "Shipped production features using Next.js and Django in a fast, iterative client environment.",
     ],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: "mealpository",
+    title: "Mealpository",
+    category: "Collaborative recipe and meal-planning platform",
+    status: "Rebuild in progress",
+    description:
+      "A multi-user food planning platform built around shared kitchens, recipe organization, pantry tracking, meal planning, grocery workflows, and controlled sharing.",
+    href: "https://mealpository.com",
+    tech: ["Python", "React", "PostgreSQL", "AWS", "Terraform"],
+    meta: "2025–present • product • cloud infrastructure",
+    featured: true,
+  },
+  {
+    id: "havenview",
+    title: "HavenView",
+    category: "Privacy-first home security platform",
+    status: "Completed",
+    description:
+      "A LAN-first home security system integrating ONVIF cameras, WebRTC live streaming, motion-triggered recording, event buffering, retention controls, and self-hosted deployment on a dedicated Ubuntu server.",
+    tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
+    meta: "2025 • systems • private production deployment",
+    featured: true,
+  },
+  {
+    id: "simple-photo-tools",
+    title: "Simple Photo Tools",
+    category: "Privacy-first browser-based photo utilities",
+    status: "Production",
+    description:
+      "A suite of browser-based photo tools for watermarking, collages, conversion, resizing, compression, cropping, rotation, social formatting, and metadata removal. Files stay on the device.",
+    href: "https://simplephototools.com",
+    githubHref: "https://github.com/Seanspoons/simple-photo-tools",
+    tech: ["React", "TypeScript", "Canvas API", "PWA"],
+    meta: "2025 • browser-side processing",
+    featured: false,
+  },
+  {
+    id: "cmpt-201-systems",
+    title: "CMPT 201 Systems Programming",
+    category: "Systems programming coursework",
+    status: "Completed",
+    description:
+      "A Unix-like shell, custom malloc/free memory allocator, and MapReduce system built in C, covering process control, dynamic memory management, and parallel systems concepts.",
+    tech: ["C", "Process Control", "Memory Management", "MapReduce"],
+    meta: "2026 • academic • systems",
+    featured: false,
+  },
+  {
+    id: "mcba-league",
+    title: "MCBA League",
+    category: "Community basketball league platform",
+    status: "Production",
+    description:
+      "An admin dashboard and public league site supporting schedules, standings, statistics, and scoring workflows for a local community league.",
+    href: "https://mcba-league.com",
+    githubHref: "https://github.com/Seanspoons/mcba",
+    tech: ["React", "Supabase", "Tailwind CSS"],
+    meta: "2025 • community • production",
+    featured: false,
   },
 ];
 
