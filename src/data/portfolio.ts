@@ -4,6 +4,14 @@ export type CurrentFocusItem = {
   topics: string;
 };
 
+export type Experience = {
+  title: string;
+  org: string;
+  period: string;
+  location: string;
+  points: string[];
+};
+
 export const profile = {
   name: "Sean Wotherspoon",
   location: "Metro Vancouver, BC",
@@ -42,6 +50,50 @@ export const currentFocus = [
   "Preparing for full-time software engineering opportunities ahead of my April 2027 graduation.",
   "Continuing to deepen my backend, infrastructure, and system design skills through production projects.",
 ] as const;
+
+export const experiences: Experience[] = [
+  {
+    title: "Data & Software Engineer Co-op",
+    org: "Samsung R&D Canada",
+    period: "January 2025 – December 2025",
+    location: "Vancouver, BC",
+    points: [
+      "Designed and deployed Spark and Airflow pipelines supporting privacy compliance reporting and generating de-identified datasets for analytics.",
+      "Built and productionized a conformed data model over core Samsung Health logging tables with billions of total records, enabling daily downstream enrichment workflows.",
+      "Developed data generators covering 133+ tables to simulate production workloads and validate ETL transformations in development environments.",
+      "Prepared Tableau-ready reporting tables and processing views to make compliance workflows and timelines easier to inspect.",
+    ],
+  },
+  {
+    title: "Founder & Software Engineer",
+    org: "Alderwood Software",
+    period: "June 2026 – Present",
+    location: "Port Coquitlam / Vancouver, BC",
+    points: [
+      "Building custom software, websites, internal tools, and cloud solutions for small businesses while managing product discovery, technical planning, proposals, delivery systems, and business operations.",
+    ],
+  },
+  {
+    title: "Director of Technology",
+    org: "SFU Open Source Development Club",
+    period: "2024 – July 2026",
+    location: "Burnaby, BC",
+    points: [
+      "Oversaw technical direction of student-led projects, mentoring developers on architecture, Git workflows, and documentation practices.",
+      "Structured onboarding processes and technical documentation standards to improve project continuity and collaboration.",
+    ],
+  },
+  {
+    title: "Full-Stack Engineer",
+    org: "ViRA360",
+    period: "2024 (8 weeks)",
+    location: "Vancouver, BC",
+    points: [
+      "Delivered a customer-facing survey tool to measure client productivity and recommend services.",
+      "Shipped production features using Next.js and Django in a fast, iterative client environment.",
+    ],
+  },
+];
 
 export const education = {
   school: "Simon Fraser University",
