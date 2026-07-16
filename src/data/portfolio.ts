@@ -97,7 +97,7 @@ export const experiences: Experience[] = [
     title: "Founder & Software Engineer",
     org: "Alderwood Software",
     period: "June 2026 – Present",
-    location: "Port Coquitlam / Vancouver, BC",
+    location: "Vancouver, BC",
     points: [
       "Building custom software, websites, internal tools, and cloud solutions for small businesses while managing product discovery, technical planning, proposals, delivery systems, and business operations.",
     ],
@@ -105,7 +105,7 @@ export const experiences: Experience[] = [
   {
     title: "Director of Technology",
     org: "SFU Open Source Development Club",
-    period: "2024 – July 2026",
+    period: "October 2024 – July 2026",
     location: "Burnaby, BC",
     points: [
       "Oversaw technical direction of student-led projects, mentoring developers on architecture, Git workflows, and documentation practices.",
