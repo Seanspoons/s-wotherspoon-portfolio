@@ -1,4 +1,5 @@
 import Section from "./Section";
+import { currentFocus } from "../data/portfolio";
 
 export default function Now() {
   return (
@@ -14,12 +15,10 @@ export default function Now() {
         <p className="text-sm text-slate-600">
           What I&apos;m focused on right now:
         </p>
-        <ul className="mt-2 space-y-1.5 text-sm text-slate-600">
-          <li>• Designing a personal streaming analytics platform (event ingestion, windowed aggregations, replay, observability).</li>
-          <li>• Deepening my understanding of distributed data processing and backend architecture.</li>
-          <li>• Refining cloud infrastructure practices with AWS and Terraform.</li>
-          <li>• Improving reliability and monitoring in HavenView’s local-first deployment.</li>
-          <li>• Completing my Computing Science degree at SFU.</li>
+        <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm text-slate-600 marker:text-primary/30">
+          {currentFocus.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
       </section>
     </Section>

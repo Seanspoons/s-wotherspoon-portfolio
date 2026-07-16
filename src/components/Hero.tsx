@@ -1,4 +1,5 @@
 import Section from "./Section";
+import { currentSnapshot, profile } from "../data/portfolio";
 
 export default function Hero() {
   return (
@@ -12,14 +13,11 @@ export default function Hero() {
           </p>
 
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">
-            Building scalable data pipelines and cloud-native systems
+            {profile.headline}
           </h1>
 
           <p className="text-slate-600 leading-relaxed max-w-xl">
-            Completed a 12-month Data Engineering co-op at Samsung R&D Canada,
-            working on Spark & Airflow pipelines over large-scale health logging datasets.
-            I design privacy-conscious data systems, cloud infrastructure with Terraform, 
-            and backend services that run reliably in production.
+            {profile.introduction}
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -27,19 +25,21 @@ export default function Hero() {
               View projects
             </a>
             <a
-              href="mailto:seangwotherspoon3@gmail.com"
+              href={`mailto:${profile.email}`}
               className="rounded-lg bg-paper px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/10 hover:bg-white focus-visible-ring"
             >
               Email me
             </a>
             <a
-              href="https://github.com/Seanspoons"
+              href={profile.github}
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
             >
               GitHub
             </a>
             <a
-              href="/Sean_Wotherspoon_Resume.pdf"
+              href={profile.resume}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
@@ -52,39 +52,15 @@ export default function Hero() {
         <div className="rounded-2xl bg-paper p-5 shadow-sm ring-1 ring-primary/5 space-y-4">
           <h2 className="text-sm font-semibold text-primary">Current snapshot</h2>
 
-          <div className="space-y-3 text-sm">
-            <div>
-              <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Now</p>
-              <p className="text-slate-800">
-                Building a personal streaming analytics platform (in progress)
-              </p>
-              <p className="text-slate-500 text-xs">
-                Event ingestion • windowed aggregation • replay • observability
-              </p>
-            </div>
-
-            <div>
-              <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Recently</p>
-              <p className="text-slate-800">
-                Completed Data Engineer Co-op — Samsung&nbsp;R&amp;D&nbsp;Canada
-              </p>
-              <p className="text-slate-500 text-xs">Spark • Airflow • AWS analytics</p>
-            </div>
-
-            <div>
-              <p className="text-slate-500 text-xs uppercase tracking-wide mb-1">Recent</p>
-              <p className="text-slate-800">
-                HavenView — privacy-first home security (WebRTC • ONVIF • LAN-first)
-              </p>
-              <p className="text-slate-800">
-                Mealpository — cloud-native AWS app (Terraform • ECS/Fargate)
-              </p>
-            </div>
+          <div className="divide-y divide-primary/5 text-sm">
+            {currentSnapshot.map((item) => (
+              <div key={item.title} className="py-3 first:pt-0 last:pb-0">
+                <p className="mb-1 text-xs font-medium text-primary">{item.title}</p>
+                <p className="text-slate-700">{item.summary}</p>
+                <p className="mt-1 text-xs text-slate-500">{item.topics}</p>
+              </div>
+            ))}
           </div>
-
-          <p className="text-xs text-slate-400 pt-1">
-            Spark • Airflow • AWS • Terraform • Docker • FastAPI • WebRTC • PostgreSQL • Prometheus • React
-          </p>
         </div>
       </section>
     </Section>
