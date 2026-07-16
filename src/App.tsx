@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import Certifications from "./components/Certifications";
 import TechStack from "./components/TechStack";
 import Notes from "./components/Notes";
-import Now from "./components/Now";
 import NotePage from "./components/NotePage";
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
@@ -43,7 +42,6 @@ function HomePage() {
       <Projects />
       <Notes />
       <About />
-      <Now />
       <TechStack />
       <Education />
       <Certifications />

@@ -9,12 +9,13 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project, featured = false, compact = false }: ProjectCardProps) {
   const { title, category, status, description, href, githubHref, tech, meta } = project;
+  const visibleTech = featured ? tech : tech.slice(0, 3);
 
   return (
     <motion.div className="h-full" whileHover={{ y: -3 }} transition={{ duration: 0.2 }}>
       <article
         className={`h-full rounded-xl bg-paper ring-1 ring-primary/5 flex flex-col justify-between transition hover:shadow-md hover:ring-primary/10 ${
-          featured ? "p-5 sm:p-7" : "p-5"
+          featured ? "p-5 sm:p-7" : compact ? "p-4" : "p-4 sm:p-5"
         }`}
       >
         <div className="space-y-2">
@@ -29,15 +30,17 @@ export default function ProjectCard({ project, featured = false, compact = false
           <h4 className={`${featured ? "text-lg" : "text-base"} font-semibold text-primary`}>
             {title}
           </h4>
-          <p className="text-[11px] text-slate-400">{meta}</p>
-          <p className={`text-sm text-slate-600 leading-relaxed ${compact ? "line-clamp-3" : ""}`}>
+          {(featured || compact) && (
+            <p className="text-[11px] text-slate-400">{meta}</p>
+          )}
+          <p className={`${featured ? "text-sm" : "text-[13px]"} text-slate-600 leading-relaxed ${compact ? "line-clamp-3" : ""}`}>
             {description}
           </p>
         </div>
 
         <div className="mt-4 space-y-3">
           <div className={`flex flex-wrap gap-2 ${compact ? "hidden" : ""}`}>
-            {tech.map((item) => (
+            {visibleTech.map((item) => (
               <span
                 key={item}
                 className="rounded-full bg-surface px-2.5 py-1 text-[11px] text-primary/70"

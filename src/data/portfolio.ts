@@ -51,7 +51,7 @@ export const profile = {
   headline:
     "Building reliable backend systems, cloud infrastructure, and production software",
   introduction:
-    "I’m a software engineer with professional experience in data engineering, backend development, and cloud infrastructure. During a 12-month Data Engineering co-op at Samsung R&D Canada, I built Spark and Airflow pipelines over large-scale Samsung Health logging datasets. Outside of work, I build and operate production software spanning budgeting, monitoring, developer tools, and cloud-native applications.",
+    "I’m a software engineer with professional data engineering experience and a focus on backend development and cloud infrastructure. I build production software end to end, from data models and APIs through deployment, observability, and long-term operation.",
 } as const;
 
 export const currentSnapshot: CurrentFocusItem[] = [
@@ -71,14 +71,6 @@ export const currentSnapshot: CurrentFocusItem[] = [
     topics: "Product discovery • technical planning • delivery systems",
   },
 ];
-
-export const currentFocus = [
-  "Rebuilding Mealpository into a cohesive, production-ready V1.",
-  "Running a small private beta of Harbour and improving its budgeting and transaction-review workflows.",
-  "Developing Alderwood Software’s consulting systems and working through prospective opportunities.",
-  "Preparing for full-time software engineering opportunities ahead of my April 2027 graduation.",
-  "Continuing to deepen my backend, infrastructure, and system design skills through production projects.",
-] as const;
 
 export const experiences: Experience[] = [
   {
@@ -178,7 +170,7 @@ export const projects: Project[] = [
     category: "Lightweight CRM and consulting operations platform",
     status: "Internal tool",
     description:
-      "A private consulting operations system for companies, contacts, opportunities, pipelines, next actions, calendar workflows, and relationship history. It also includes global search and keyboard navigation.",
+      "An internal CRM for Alderwood’s companies, contacts, opportunities, next actions, calendar workflows, and relationship history.",
     tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Google Calendar"],
     meta: "2026 • Alderwood Software • internal operations",
     group: "additional",
@@ -189,7 +181,7 @@ export const projects: Project[] = [
     category: "Privacy-first browser-based PDF utilities",
     status: "Production",
     description:
-      "Browser-side PDF tools for merging documents and splitting by selected pages, individual pages, or ranges. Previewing and exports stay on the device with no upload or account required.",
+      "Browser-side PDF utilities for merging and splitting documents without uploading files or creating an account.",
     href: "https://simplepdftools.app",
     githubHref: "https://github.com/Seanspoons/simple-pdf-tools",
     tech: ["React", "TypeScript", "pdf-lib", "PDF.js", "PWA"],
@@ -202,7 +194,7 @@ export const projects: Project[] = [
     category: "Privacy-first browser-based photo utilities",
     status: "Production",
     description:
-      "A suite of browser-based photo tools for watermarking, collages, conversion, resizing, compression, cropping, rotation, social formatting, and metadata removal. Files stay on the device.",
+      "Browser-side tools for watermarking, resizing, compressing, cropping, converting, and removing metadata while keeping files on-device.",
     href: "https://simplephototools.com",
     githubHref: "https://github.com/Seanspoons/simple-photo-tools",
     tech: ["React", "TypeScript", "Canvas API", "PWA"],
@@ -215,7 +207,7 @@ export const projects: Project[] = [
     category: "Running training insights platform",
     status: "In development",
     description:
-      "An iPhone and Apple Watch product for recording and importing running workouts, then shaping them into training signals, trends, and prediction inputs through a shared backend and data model.",
+      "An iPhone and Apple Watch product for recording and importing runs, then turning workout data into training trends and prediction inputs.",
     tech: ["Swift", "HealthKit", "watchOS", "TypeScript", "PostgreSQL"],
     meta: "2026 • iOS • data product",
     group: "additional",
@@ -306,9 +298,8 @@ export const projects: Project[] = [
 ];
 
 export const aboutParagraphs = [
-  "I’m a software engineer focused on backend systems, data engineering, and cloud infrastructure. During my 12-month co-op at Samsung R&D Canada, I built Spark and Airflow pipelines supporting privacy compliance and analytics over large-scale Samsung Health logging datasets.",
-  "Outside of professional work, I build and operate production software products across budgeting, monitoring, meal planning, developer tools, and home infrastructure. I enjoy owning systems end to end, from product decisions and data models to deployment, observability, security, and long-term maintenance.",
-  "I’m completing my Computing Science degree at Simon Fraser University and expect to graduate in April 2027.",
+  "I like owning systems end to end: understanding the problem, shaping the data model and interfaces, making the architecture tradeoffs, and carrying the result through deployment and maintenance.",
+  "I favour maintainable designs, explicit operational boundaries, and clear failure modes over unnecessary complexity. Shipping matters, but so does leaving a system understandable enough to change safely later.",
 ] as const;
 
 export const principles = [
