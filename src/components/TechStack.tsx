@@ -1,40 +1,6 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
-
-const STACK_SECTIONS = [
-  {
-    label: "Backend & Data",
-    items: [
-      "Go",
-      "Python",
-      "FastAPI",
-      "Django REST",
-      "Spark",
-      "Airflow",
-      "PostgreSQL",
-      "Redis"
-    ],
-  },
-  {
-    label: "Cloud & Infrastructure",
-    items: [
-      "AWS (SAA-C03)",
-      "Terraform",
-      "Docker",
-      "Prometheus",
-      "GitHub Actions",
-      "Cloudflare Tunnels"
-    ],
-  },
-  {
-    label: "Languages",
-    items: ["Go", "Python", "Java", "Scala", "TypeScript", "SQL"],
-  },
-  {
-    label: "Frontend",
-    items: ["React", "Angular", "Next.js", "TailwindCSS"],
-  },
-];
+import { skillGroups } from "../data/portfolio";
 
 export default function TechStack() {
   return (
@@ -49,7 +15,7 @@ export default function TechStack() {
         </h2>
 
         <div className="grid gap-3 sm:grid-cols-2">
-          {STACK_SECTIONS.map((group) => (
+          {skillGroups.map((group) => (
             <motion.div
               key={group.label}
               whileHover={{ y: -3 }}

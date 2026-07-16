@@ -1,6 +1,7 @@
 import Section from "./Section";
 import awsSAA from "../assets/aws-saa.png"
 import { motion } from "framer-motion";
+import { certification } from "../data/portfolio";
 
 export default function Certifications() {
   return (
@@ -24,17 +25,17 @@ export default function Certifications() {
 
                     <div>
                         <p className="font-medium text-primary">
-                        AWS Certified Solutions Architect — Associate (SAA-C03)
+                        {certification.title}
                         </p>
                         <p className="text-xs text-slate-500">
-                        Issued 2025 • Valid through 2028
+                        {certification.period}
                         </p>
                     </div>
                     </div>
 
                     {/* Right side: link */}
                     <a
-                    href="https://www.credly.com/badges/efcfddfd-eefa-4c77-a377-11a3f09edb88/public_url"
+                    href={certification.verificationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-sm text-accent hover:text-accent/80 whitespace-nowrap focus-visible-ring rounded"

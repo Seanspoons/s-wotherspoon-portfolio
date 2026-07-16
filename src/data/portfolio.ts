@@ -36,6 +36,11 @@ export type Project = {
   githubHref?: string;
 };
 
+export type SkillGroup = {
+  label: string;
+  items: string[];
+};
+
 export const profile = {
   name: "Sean Wotherspoon",
   location: "Metro Vancouver, BC",
@@ -318,6 +323,41 @@ export const projects: Project[] = [
   },
 ];
 
+export const aboutParagraphs = [
+  "I’m a software engineer focused on backend systems, data engineering, and cloud infrastructure. During my 12-month co-op at Samsung R&D Canada, I built Spark and Airflow pipelines supporting privacy compliance and analytics over large-scale Samsung Health logging datasets.",
+  "Outside of professional work, I build and operate production software products across budgeting, monitoring, meal planning, developer tools, and home infrastructure. I enjoy owning systems end to end, from product decisions and data models to deployment, observability, security, and long-term maintenance.",
+  "I’m completing my Computing Science degree at Simon Fraser University and expect to graduate in April 2027.",
+] as const;
+
+export const principles = [
+  "Design for reliability first",
+  "Understand the system end to end",
+  "Optimize for clarity over complexity",
+] as const;
+
+export const skillGroups: SkillGroup[] = [
+  {
+    label: "Languages",
+    items: ["Python", "Go", "TypeScript", "Scala", "Java", "SQL", "C"],
+  },
+  {
+    label: "Data Engineering",
+    items: ["Apache Spark", "Apache Airflow", "PostgreSQL"],
+  },
+  {
+    label: "Backend",
+    items: ["FastAPI", "Django REST Framework", "Node.js", "Redis"],
+  },
+  {
+    label: "Cloud & Infrastructure",
+    items: ["AWS", "Terraform", "Docker", "GitHub Actions", "Prometheus", "Cloudflare"],
+  },
+  {
+    label: "Frontend",
+    items: ["React", "Angular", "Next.js", "Tailwind CSS"],
+  },
+];
+
 export const education = {
   school: "Simon Fraser University",
   degree: "Bachelor of Science in Computing Science",
@@ -330,4 +370,11 @@ export const education = {
     "Systems Programming",
     "Software Engineering",
   ],
+} as const;
+
+export const certification = {
+  title: "AWS Certified Solutions Architect – Associate (SAA-C03)",
+  period: "Issued 2025 • Valid through 2028",
+  verificationUrl:
+    "https://www.credly.com/badges/efcfddfd-eefa-4c77-a377-11a3f09edb88/public_url",
 } as const;
