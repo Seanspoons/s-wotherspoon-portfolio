@@ -28,32 +28,44 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <p className="text-[11px] text-slate-700 font-light">{meta}</p>
           </div>
 
-          {imgSrc && (
-            <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5 max-w-2xl">
-              <img
-                src={imgSrc}
-                alt={imgAlt || ""}
-                className="w-full"
-              />
-            </div>
-          )}
+          <div className="grid gap-8 items-start md:grid-cols-[1.25fr_0.75fr]">
+            {imgSrc && (
+              <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5">
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open ${title}`}
+                >
+                  <img
+                    src={imgSrc}
+                    alt={imgAlt || ""}
+                    className="w-full"
+                  />
+                </a>
+              </div>
+            )}
 
-          <p className="text-sm text-[13px] text-slate-600 leading-relaxed">
-            {description}
-          </p>
+            <div className="flex flex-col space-y-5">
+              <p className="text-sm text-slate-600 leading-relaxed">
+                {description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {tech.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full bg-surface px-2.5 py-1 text-[11px] text-primary/70"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-4 space-y-3">
-          <div className="flex flex-wrap gap-2">
-            {tech.map((item) => (
-              <span
-                key={item}
-                className="rounded-full bg-surface px-2.5 py-1 text-[11px] text-primary/70"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
 
           {(githubHref || href || hrefText) && (
             <div className="flex items-center justify-end gap-3">

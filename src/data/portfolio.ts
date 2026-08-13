@@ -117,7 +117,7 @@ export const projects: Project[] = [
       "A LAN-first home security platform integrating ONVIF cameras, go2rtc/WebRTC streaming, a FastAPI backend and local motion recordings. It runs on a dedicated Ubuntu server with configurable retention and secure remote access.",
     href: "https://seanwotherspoon.ca/notes/havenview-v1",
     tech: ["FastAPI", "React", "WebRTC", "Docker", "PostgreSQL", "Redis", "Cloudflare"],
-    meta: "2025-present • self-hosted • used by my family",
+    meta: "2025-present • self-hosted • in active use",
     hrefText: "Read case study",
     imgSrc: "/projects/havenview.png",
     imgAlt: "HavenView Raspberry Pi 5 internal architecture diagram showing Docker services, go2rtc, PostgreSQL, Redis, and storage.",
