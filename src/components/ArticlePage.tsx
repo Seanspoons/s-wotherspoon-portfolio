@@ -1,18 +1,18 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, type ReactNode } from "react";
-import { NOTES } from "./Notes";
-import HavenViewNote from "./notes/HavenViewNote";
+import { ARTICLES } from "./TechnicalWriting";
+import HavenViewArticle from "./articles/HavenViewArticle";
 
-const NOTE_COMPONENTS: Record<string, ReactNode> = {
-  "havenview-v1": <HavenViewNote />,
+const ARTICLE_COMPONENTS: Record<string, ReactNode> = {
+  "havenview-v1": <HavenViewArticle />,
 };
 
-export default function NotePage() {
+export default function ArticlePage() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
 
-  const meta = NOTES.find((n) => n.slug === slug);
-  const content = slug ? NOTE_COMPONENTS[slug] : null;
+  const meta = ARTICLES.find((n) => n.slug === slug);
+  const content = slug ? ARTICLE_COMPONENTS[slug] : null;
 
   useEffect(() => {
     if (!meta) return;
@@ -31,7 +31,7 @@ export default function NotePage() {
   }, [meta]);
   
   const handleBack = () => {
-    navigate("/", { state: { scrollTo: "notes" } });
+    navigate("/", { state: { scrollTo: "articles" } });
   };
 
   return (
@@ -41,12 +41,12 @@ export default function NotePage() {
         onClick={handleBack}
         className="text-[11px] text-slate-500 hover:text-accent"
       >
-        ← Back to notes
+        ← Back to articles
       </button>
 
       {!meta || !content ? (
         <p className="text-sm text-slate-600">
-          Note not found. Try going back to notes on the home page.
+          Article not found. Try going back to articles on the home page.
         </p>
       ) : (
         <section className="space-y-5">

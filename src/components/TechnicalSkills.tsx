@@ -10,7 +10,7 @@ const groupLayout = [
   "md:col-span-2 lg:col-span-3",
 ] as const;
 
-export default function TechStack() {
+export default function TechnicalSkills() {
   return (
     <Section>
       <section id="stack" className="space-y-4 scroll-mt-20">
@@ -19,7 +19,7 @@ export default function TechStack() {
             after:absolute after:left-0 after:-bottom-1
             after:h-[2px] after:w-8 after:bg-accent after:rounded"
         >
-          Tech stack
+          Technical Skills
         </h2>
 
         <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-6">

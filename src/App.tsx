@@ -5,12 +5,11 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
-import About from "./components/About";
 import Footer from "./components/Footer";
 import Certifications from "./components/Certifications";
-import TechStack from "./components/TechStack";
-import Notes from "./components/Notes";
-import NotePage from "./components/NotePage";
+import TechnicalSkills from "./components/TechnicalSkills";
+import TechnicalWriting from "./components/TechnicalWriting";
+import NotePage from "./components/ArticlePage";
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect } from "react";
 import { MotionConfig } from "framer-motion";
@@ -22,10 +21,10 @@ function HomePage() {
   useEffect(() => {
     const state = location.state as { scrollTo?: string } | null;
 
-    if (state?.scrollTo === "notes") {
-      // wait one frame so Notes has rendered
+    if (state?.scrollTo === "articles") {
+      // wait one frame so Articles has rendered
       requestAnimationFrame(() => {
-        const el = document.getElementById("notes");
+        const el = document.getElementById("articles");
         if (el) {
           el.scrollIntoView({ behavior: "smooth", block: "start" });
         }
@@ -40,9 +39,8 @@ function HomePage() {
       <Hero />
       <Experience />
       <Projects />
-      <Notes />
-      <About />
-      <TechStack />
+      <TechnicalWriting />
+      <TechnicalSkills />
       <Education />
       <Certifications />
       <Contact />
@@ -59,7 +57,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/notes/:slug" element={<NotePage />} />
+          <Route path="/articles/:slug" element={<NotePage />} />
         </Routes>
         <Footer />
       </div>

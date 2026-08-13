@@ -1,5 +1,4 @@
-// src/components/notes/HavenViewNote.tsx
-export default function HavenViewNote() {
+export default function HavenViewArticle() {
   return (
     <div className="space-y-6 text-sm text-slate-700">
       {/* Intro */}
@@ -40,7 +39,7 @@ export default function HavenViewNote() {
         <figure className="space-y-2">
           <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5">
             <img
-              src="/notes/havenview-architecture-v1.png"
+              src="/articles/havenview-architecture-v1.png"
               alt="HavenView system architecture diagram showing clients, Cloudflare, Supabase, TURN, and the home LAN hub."
               className="w-full"
             />
@@ -68,7 +67,7 @@ export default function HavenViewNote() {
         <figure className="space-y-2">
           <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5">
             <img
-              src="/notes/havenview-hub-raspberry-pi-5-architecture-v1.png"
+              src="/articles/havenview-hub-raspberry-pi-5-architecture-v1.png"
               alt="HavenView Raspberry Pi 5 internal architecture diagram showing Docker services, go2rtc, PostgreSQL, Redis, and storage."
               className="w-full"
             />
@@ -152,7 +151,7 @@ export default function HavenViewNote() {
           <figure className="space-y-2 flex flex-col items-center">
             <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5 max-w-[260px] w-full">
               <img
-                src="/notes/havenview-dashboard.jpg"
+                src="/articles/havenview-dashboard.jpg"
                 alt="HavenView dashboard showing live camera view and recent motion events. Blurred for privacy."
                 className="w-full object-cover"
               />
@@ -167,7 +166,7 @@ export default function HavenViewNote() {
           <figure className="space-y-2 flex flex-col items-center">
             <div className="overflow-hidden rounded-xl bg-surface ring-1 ring-primary/5 max-w-[260px] w-full">
               <img
-                src="/notes/havenview-activity-page.jpg"
+                src="/articles/havenview-activity-page.jpg"
                 alt="HavenView activity page showing the event list and filters. Blurred for privacy."
                 className="w-full object-cover"
               />

@@ -10,9 +10,9 @@ export default function Header() {
   };
 
   const navigation = [
-    { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
-    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#writing", label: "Writing" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
   ];

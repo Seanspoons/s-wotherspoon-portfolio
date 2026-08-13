@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
-import NoteCard from "./NoteCard";
+import ArticleCard from "./ArticleCard";
 
-export type Note = {
+export type Article = {
   slug: string;
   title: string;
   date: string;
@@ -10,7 +10,7 @@ export type Note = {
   href?: string;
 };
 
-const NOTES: Note[] = [
+const ARTICLES: Article[] = [
   {
     slug: "havenview-v1",
     title: "HavenView v1 — Raspberry Pi home security hub",
@@ -20,43 +20,38 @@ const NOTES: Note[] = [
   },
 ];
 
-export default function Notes() {
-  const hasNotes = NOTES.length > 0;
+export default function Articles() {
+  const hasArticles = ARTICLES.length > 0;
 
   return (
     <Section>
-      <section id="notes" className="space-y-4 scroll-mt-20">
+      <section id="writing" className="space-y-4 scroll-mt-20">
         <h2
           className="text-lg font-semibold text-primary relative
             after:absolute after:left-0 after:-bottom-1
             after:h-[2px] after:w-8 after:bg-accent after:rounded"
         >
-          Notes
+          Technical Writing
         </h2>
 
-        <p className="text-sm text-slate-600">
-          A collection of notes on what I’m building, learning, and thinking through.
-        </p>
-
-        {/* If no notes → show empty state */}
-        {!hasNotes && (
+        {/* If no articles → show empty state */}
+        {!hasArticles && (
           <div className="rounded-xl bg-paper ring-1 ring-primary/5 p-6 text-center">
             <p className="text-sm text-slate-500">
-              No notes yet — check back later.
+              No articles yet — check back later.
             </p>
           </div>
         )}
 
-        {/* Notes grid */}
-        {hasNotes && (
-          <div className="grid gap-3 md:grid-cols-2">
-            {NOTES.map((note) => (
+        {hasArticles && (
+          <div className="grid gap-3">
+            {ARTICLES.map((article) => (
               <motion.div
-                key={note.slug}
+                key={article.slug}
                 whileHover={{ y: -3 }}
                 transition={{ duration: 0.2 }}
               >
-                <NoteCard note={note} />
+                <ArticleCard article={article} />
               </motion.div>
             ))}
           </div>
@@ -66,4 +61,4 @@ export default function Notes() {
   );
 }
 
-export { NOTES };
+export { ARTICLES };

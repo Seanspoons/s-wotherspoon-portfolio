@@ -115,7 +115,7 @@ export const projects: Project[] = [
     category: "Privacy-first home security platform",
     description:
       "A LAN-first home security platform integrating ONVIF cameras, go2rtc/WebRTC streaming, a FastAPI backend and local motion recordings. It runs on a dedicated Ubuntu server with configurable retention and secure remote access.",
-    href: "https://seanwotherspoon.ca/notes/havenview-v1",
+    href: "https://seanwotherspoon.ca/articles/havenview-v1",
     tech: ["FastAPI", "React", "WebRTC", "Docker", "PostgreSQL", "Redis", "Cloudflare"],
     meta: "2025-present • self-hosted • in active use",
     hrefText: "Read case study",
@@ -123,11 +123,6 @@ export const projects: Project[] = [
     imgAlt: "HavenView Raspberry Pi 5 internal architecture diagram showing Docker services, go2rtc, PostgreSQL, Redis, and storage.",
   },
 ];
-
-export const aboutParagraphs = [
-  "I like owning systems end to end: understanding the problem, shaping the data model and interfaces, making the architecture tradeoffs, and carrying the result through deployment and maintenance.",
-  "I favour maintainable designs, explicit operational boundaries, and clear failure modes over unnecessary complexity. Shipping matters, but so does leaving a system understandable enough to change safely later.",
-] as const;
 
 export const principles = [
   "Design for reliability first",
