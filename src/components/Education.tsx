@@ -24,7 +24,12 @@ export default function Education() {
                         {/* header */}
                         <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 sm:gap-3">
                             <h3 className="font-medium text-primary">{education.school}</h3>
-                            <p className="text-xs text-slate-500">{education.period}</p>
+                            <div className="mt-1 sm:mt-0 text-left sm:text-right">
+                                <p className="text-xs text-slate-500">{education.period}</p>
+                                {location && (
+                                <p className="text-xs text-slate-400">{education.location}</p>
+                                )}
+                            </div>
                         </div>
 
                         <p className="text-sm text-slate-600">

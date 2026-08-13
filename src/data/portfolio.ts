@@ -157,6 +157,7 @@ export const education = {
   school: "Simon Fraser University",
   degree: "Bachelor of Science in Computing Science",
   period: "September 2021 – April 2027 (Expected)",
+  location: "Burnaby, BC"
 } as const;
 
 export const certification = {
