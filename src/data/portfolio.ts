@@ -133,23 +133,23 @@ export const principles = [
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Python", "Go", "TypeScript", "Scala", "Java", "SQL", "C"],
+    items: ["Scala", "SQL", "Python", "Java", "TypeScript", "JavaScript"],
   },
   {
     label: "Data Engineering",
-    items: ["Apache Spark", "Apache Airflow", "PostgreSQL"],
+    items: ["Apache Spark", "Apache Airflow", "Apache Iceberg", "ETL", "Data Modeling", "DynamoDB", "Tableau"],
   },
   {
-    label: "Backend",
-    items: ["FastAPI", "Django REST Framework", "Node.js", "Redis"],
+    label: "Backend & Storage",
+    items: ["Django", "FastAPI", "PostgreSQL", "Redis", "REST APIs"],
   },
   {
     label: "Cloud & Infrastructure",
-    items: ["AWS", "Terraform", "Docker", "GitHub Actions", "Prometheus", "Cloudflare"],
+    items: ["AWS", "Terraform", "Docker", "Linux", "Git", "Nginx", "Cloudflare"],
   },
   {
-    label: "Frontend",
-    items: ["React", "Angular", "Next.js", "Tailwind CSS"],
+    label: "Web",
+    items: ["Angular", "React", "Next.js", "Tailwind CSS"],
   },
 ];
 
