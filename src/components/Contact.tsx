@@ -42,7 +42,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="rounded-lg bg-surface px-4 py-2 text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
                 >
-                    Resume
+                    View resume
                 </a>
             </div>
         </div>

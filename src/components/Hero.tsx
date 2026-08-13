@@ -4,19 +4,17 @@ import { currentSnapshot, profile } from "../data/portfolio";
 export default function Hero() {
   return (
     <Section reveal="mount">
-      <section className="grid gap-8 md:grid-cols-[1.05fr_0.95fr] items-start">
+      <section className="grid gap-8 md:grid-cols-[1.15fr_0.85fr] items-center">
         <div className="space-y-5">
           <p className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 rounded-full bg-accent/15 px-3 py-1 text-[11px] font-medium text-accent">
-            <span>Backend • Data • Infrastructure • Vancouver</span>
-            <span className="hidden sm:block h-4 w-px bg-accent/40"></span>
-            <span>AWS SAA-C03 certified</span>
+            <span>SFU Computing Science • Graduating April 2027</span>
           </p>
 
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">
             {profile.headline}
           </h1>
 
-          <p className="text-slate-600 leading-relaxed max-w-xl">
+          <p className="text-slate-600 leading-relaxed max-w-lg">
             {profile.introduction}
           </p>
 
@@ -25,10 +23,10 @@ export default function Hero() {
               View projects
             </a>
             <a
-              href={`mailto:${profile.email}`}
+              href={profile.resume}
               className="rounded-lg bg-paper px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/10 hover:bg-white focus-visible-ring"
             >
-              Email me
+              View resume
             </a>
             <a
               href={profile.github}
@@ -38,26 +36,17 @@ export default function Hero() {
             >
               GitHub
             </a>
-            <a
-              href={profile.resume}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg bg-surface px-4 py-2 text-sm font-medium text-primary ring-1 ring-primary/5 hover:bg-paper focus-visible-ring"
-            >
-              Resume
-            </a>
           </div>
         </div>
 
         <div className="rounded-2xl bg-paper p-5 shadow-sm ring-1 ring-primary/5 space-y-4">
-          <h2 className="text-sm font-semibold text-primary">Current snapshot</h2>
+          <h2 className="text-sm font-semibold text-primary">At a glance</h2>
 
           <div className="divide-y divide-primary/5 text-sm">
             {currentSnapshot.map((item) => (
               <div key={item.title} className="py-3 first:pt-0 last:pb-0">
                 <p className="mb-1 text-xs font-medium text-primary">{item.title}</p>
                 <p className="text-slate-700">{item.summary}</p>
-                <p className="mt-1 text-xs text-slate-500">{item.topics}</p>
               </div>
             ))}
           </div>

@@ -49,26 +49,31 @@ export const profile = {
   linkedIn: "https://linkedin.com/in/sean-wotherspoon",
   resume: "/Sean_Wotherspoon_Resume.pdf",
   headline:
-    "Building reliable backend systems, cloud infrastructure, and production software",
+    "Data engineer building reliable pipelines and backend systems.",
   introduction:
-    "I’m a software engineer with professional data engineering experience and a focus on backend development and cloud infrastructure. I build production software end to end, from data models and APIs through deployment, observability, and long-term operation.",
+    "I’m a former Samsung R&D data engineering co-op with experience shipping production Scala/Spark pipelines, Airflow workflows and internal data tooling. I’m seeking new-graduate data engineering and backend/platform roles beginning in spring 2027.",
 } as const;
 
 export const currentSnapshot: CurrentFocusItem[] = [
   {
-    title: "Harbour",
-    summary: "Running a private beta with a small group of early users.",
+    title: "Samsung R&D Canada",
+    summary: "12-month data engineering co-op supporting the Samsung Health data platform.",
     topics: "Budgeting • Plaid • transaction review • envelope planning",
   },
   {
-    title: "Mealpository",
-    summary: "Rebuilding the product into its first cohesive, production-ready release.",
+    title: "Production data systems",
+    summary: "Scala, Apache Spark, Airflow, Iceberg, backfills and rerun-safe processing.",
     topics: "Collaborative kitchens • recipes • pantry • meal planning",
   },
   {
-    title: "Alderwood Software",
-    summary: "Building the consulting business and working through prospective opportunities.",
-    topics: "Product discovery • technical planning • delivery systems",
+    title: "Current work",
+    summary: "Delivering a $10,000 client engagement through Alderwood Software.",
+    topics: "",
+  },
+  {
+    title: "Availability",
+    summary: "April 2027 • Metro Vancouver or remote within Canada",
+    topics: "",
   },
 ];
 
