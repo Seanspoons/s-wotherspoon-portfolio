@@ -12,28 +12,20 @@ export type Experience = {
   points: string[];
 };
 
-export type ProjectStatus =
-  | "Private beta"
-  | "Rebuild in progress"
-  | "Production"
-  | "Maintained"
-  | "Completed"
-  | "Internal tool"
-  | "In development";
-
 export type ProjectGroup = "featured" | "additional" | "archive";
 
 export type Project = {
   id: string;
   title: string;
   category: string;
-  status: ProjectStatus;
   description: string;
   tech: string[];
   meta: string;
-  group: ProjectGroup;
   href?: string;
   githubHref?: string;
+  hrefText?: string;
+  imgSrc?: string;
+  imgAlt?: string;
 };
 
 export type SkillGroup = {
@@ -79,226 +71,56 @@ export const currentSnapshot: CurrentFocusItem[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Data & Software Engineer Co-op",
+    title: "Data Engineer Co-op",
     org: "Samsung R&D Canada",
     period: "January 2025 – December 2025",
     location: "Vancouver, BC",
     points: [
-      "Designed and deployed Spark and Airflow pipelines supporting privacy compliance reporting and generating de-identified datasets for analytics.",
-      "Built and productionized a conformed data model over core Samsung Health logging tables with billions of total records, enabling daily downstream enrichment workflows.",
-      "Developed data generators covering 133+ tables to simulate production workloads and validate ETL transformations in development environments.",
-      "Prepared Tableau-ready reporting tables and processing views to make compliance workflows and timelines easier to inspect.",
+      "Implemented and tested production Scala/Spark transformations for a daily pipeline supporting one of Samsung Health’s largest conformed datasets.",
+      "Owned a GDPR analytics initiative from design through deployment, building two reporting tables, two Spark pipelines and two Airflow DAGs integrating DynamoDB and lakehouse data.",
+      "Built production Airflow DAGs, supported backfills and designed Spark jobs for safe reruns of failed and historical partitions.",
+      "Created a reusable synthetic-data generator pattern and automated it across 133+ lakehouse tables for local Spark development and transformation testing.",
+      "Built Tableau dashboards and presented the system’s design, results and operational limitations to the engineering team and senior engineers.",
     ],
   },
   {
-    title: "Founder & Software Engineer",
+    title: "Founder & Software Consultant",
     org: "Alderwood Software",
     period: "June 2026 – Present",
-    location: "Vancouver, BC",
+    location: "British Columbia, Canada",
     points: [
-      "Building custom software, websites, internal tools, and cloud solutions for small businesses while managing product discovery, technical planning, proposals, delivery systems, and business operations.",
-    ],
-  },
-  {
-    title: "Director of Technology",
-    org: "SFU Open Source Development Club",
-    period: "October 2024 – July 2026",
-    location: "Burnaby, BC",
-    points: [
-      "Oversaw technical direction of student-led projects, mentoring developers on architecture, Git workflows, and documentation practices.",
-      "Structured onboarding processes and technical documentation standards to improve project continuity and collaboration.",
-    ],
-  },
-  {
-    title: "Full-Stack Engineer",
-    org: "ViRA360",
-    period: "2024 (8 weeks)",
-    location: "Vancouver, BC",
-    points: [
-      "Delivered a customer-facing survey tool to measure client productivity and recommend services.",
-      "Shipped production features using Next.js and Django in a fast, iterative client environment.",
+      "Secured and manage a $10,000 website redesign and implementation engagement, owning delivery from requirements discovery through launch.",
+      "Led discovery with the client’s owners, partners and employees and delivered the first-round design package for a Next.js website with technical SEO and Microsoft 365-integrated workflows.",
     ],
   },
 ];
 
 export const projects: Project[] = [
   {
-    id: "harbour",
-    title: "Harbour",
-    category: "Personal budgeting and financial clarity platform",
-    status: "Private beta",
-    description:
-      "A budgeting application that connects financial accounts, brings new transactions into a review workflow, and helps users maintain an envelope-based plan grounded in what actually happened.",
-    href: "https://harbourbudget.com",
-    tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Plaid"],
-    meta: "2026–present • product • private beta",
-    group: "featured",
-  },
-  {
     id: "mealpository",
     title: "Mealpository",
     category: "Collaborative recipe and meal-planning platform",
-    status: "Rebuild in progress",
     description:
-      "A multi-user food planning platform built around shared kitchens, recipe organization, pantry tracking, meal planning, grocery workflows, and controlled sharing. The current rebuild is consolidating those capabilities into a cohesive V1.",
+      "A live meal-planning platform for organizing recipes, planning weekly meals and generating grocery lists. Its digitization pipeline combines Google Cloud Vision OCR with LLM-based extraction to turn recipe photos into structured application data.",
     href: "https://mealpository.com",
-    tech: ["Python", "React", "PostgreSQL", "AWS", "Terraform"],
-    meta: "2025–present • product • cloud infrastructure",
-    group: "featured",
-  },
-  {
-    id: "stackpulse",
-    title: "StackPulse",
-    category: "Application monitoring and incident management platform",
-    status: "Production",
-    description:
-      "A monitoring platform for applications and services with scheduled health checks, incident lifecycle management, email and Discord alerts, public status pages, and documentation. Operational safeguards include rate limits, SSRF protection, and encrypted check credentials.",
-    href: "https://stackpulsehq.dev",
-    tech: ["TypeScript", "Node.js", "React", "PostgreSQL", "Docker"],
-    meta: "2026 • backend • observability",
-    group: "featured",
+    tech: ["Angular", "Django", "PostgreSQL", "Docker", "Google Cloud Vision"],
+    meta: "2024–present • live product • approximately 30 registered users",
+    hrefText: "Visit site",
+    imgSrc: "/projects/mealpository.png",
+    imgAlt: "Mealpository product screenshot showing the recipes page with 4 favourites recipes in the library and filters and navigation visible along the left and top sides of the library."
   },
   {
     id: "havenview",
     title: "HavenView",
     category: "Privacy-first home security platform",
-    status: "Completed",
     description:
-      "A LAN-first home security system integrating ONVIF cameras, WebRTC live streaming, motion-triggered recording, event buffering, retention controls, and self-hosted deployment on a dedicated Ubuntu server.",
-    tech: ["FastAPI", "React", "PostgreSQL", "WebRTC", "Docker"],
-    meta: "2025 • systems • private production deployment",
-    group: "featured",
-  },
-  {
-    id: "waypoint",
-    title: "Waypoint",
-    category: "Lightweight CRM and consulting operations platform",
-    status: "Internal tool",
-    description:
-      "An internal CRM for Alderwood’s companies, contacts, opportunities, next actions, calendar workflows, and relationship history.",
-    tech: ["TypeScript", "React", "Node.js", "PostgreSQL", "Google Calendar"],
-    meta: "2026 • Alderwood Software • internal operations",
-    group: "additional",
-  },
-  {
-    id: "simple-pdf-tools",
-    title: "Simple PDF Tools",
-    category: "Privacy-first browser-based PDF utilities",
-    status: "Production",
-    description:
-      "Browser-side PDF utilities for merging and splitting documents without uploading files or creating an account.",
-    href: "https://simplepdftools.app",
-    githubHref: "https://github.com/Seanspoons/simple-pdf-tools",
-    tech: ["React", "TypeScript", "pdf-lib", "PDF.js", "PWA"],
-    meta: "2026 • browser-side processing",
-    group: "additional",
-  },
-  {
-    id: "simple-photo-tools",
-    title: "Simple Photo Tools",
-    category: "Privacy-first browser-based photo utilities",
-    status: "Production",
-    description:
-      "Browser-side tools for watermarking, resizing, compressing, cropping, converting, and removing metadata while keeping files on-device.",
-    href: "https://simplephototools.com",
-    githubHref: "https://github.com/Seanspoons/simple-photo-tools",
-    tech: ["React", "TypeScript", "Canvas API", "PWA"],
-    meta: "2025 • browser-side processing",
-    group: "additional",
-  },
-  {
-    id: "runlytical",
-    title: "Runlytical",
-    category: "Running training insights platform",
-    status: "In development",
-    description:
-      "An iPhone and Apple Watch product for recording and importing runs, then turning workout data into training trends and prediction inputs.",
-    tech: ["Swift", "HealthKit", "watchOS", "TypeScript", "PostgreSQL"],
-    meta: "2026 • iOS • data product",
-    group: "additional",
-  },
-  {
-    id: "cmpt-201-systems",
-    title: "CMPT 201 Systems Programming",
-    category: "Systems programming coursework",
-    status: "Completed",
-    description:
-      "A Unix-like shell, custom malloc/free memory allocator, and MapReduce system built in C, covering process control, dynamic memory management, and parallel systems concepts.",
-    tech: ["C", "Process Control", "Memory Management", "MapReduce"],
-    meta: "2026 • academic • systems",
-    group: "archive",
-  },
-  {
-    id: "mcba-league",
-    title: "MCBA League",
-    category: "Community basketball league platform",
-    status: "Production",
-    description:
-      "An admin dashboard and public league site supporting schedules, standings, statistics, and scoring workflows for a local community league.",
-    href: "https://mcba-league.com",
-    tech: ["React", "Supabase", "Tailwind CSS"],
-    meta: "2025 • community • production",
-    group: "additional",
-  },
-  {
-    id: "studypreplab",
-    title: "StudyPrepLab",
-    category: "Structured study platform",
-    status: "In development",
-    description:
-      "A class-based study system that turns source material into durable Learn and Practice artifacts, repeatable sessions, and progress history.",
-    tech: ["React", "Fastify", "PostgreSQL", "Drizzle"],
-    meta: "2026 • education • backend",
-    group: "archive",
-  },
-  {
-    id: "cmpt-263-exam-trainer",
-    title: "CMPT 263 Exam Trainer",
-    category: "Human-computer interaction study tool",
-    status: "Completed",
-    description:
-      "A focused final-exam practice application for SFU Human-Centered Computing course material.",
-    githubHref: "https://github.com/Seanspoons/cmpt263-exam-trainer",
-    tech: ["React", "TypeScript", "Vite"],
-    meta: "2026 • academic • learning tool",
-    group: "archive",
-  },
-  {
-    id: "cmpt-201-exam-trainer",
-    title: "CMPT 201 Exam Trainer",
-    category: "Systems programming study tool",
-    status: "Completed",
-    description:
-      "An interactive trainer spanning 20 lecture-aligned systems topics with generated drills, immediate feedback, and step-by-step explanations.",
-    githubHref: "https://github.com/Seanspoons/cmpt201-exam-trainer",
-    tech: ["React", "TypeScript", "Vite"],
-    meta: "2026 • academic • learning tool",
-    group: "archive",
-  },
-  {
-    id: "kindays",
-    title: "KinDays",
-    category: "Private shared family calendar",
-    status: "Production",
-    description:
-      "A shared family space for birthdays, anniversaries, memorials, milestones, and date calculations.",
-    href: "https://kindays.app",
-    tech: ["React", "TypeScript", "Supabase"],
-    meta: "2025 • family utility • production",
-    group: "additional",
-  },
-  {
-    id: "portfolio",
-    title: "Portfolio",
-    category: "Personal portfolio and technical writing",
-    status: "Production",
-    description:
-      "This responsive portfolio, including the project archive and a long-form HavenView architecture note.",
-    href: "https://seanwotherspoon.ca",
-    githubHref: "https://github.com/Seanspoons/s-wotherspoon-portfolio",
-    tech: ["React", "TypeScript", "Tailwind CSS"],
-    meta: "2025–present • web • production",
-    group: "archive",
+      "A LAN-first home security platform integrating ONVIF cameras, go2rtc/WebRTC streaming, a FastAPI backend and local motion recordings. It runs on a dedicated Ubuntu server with configurable retention and secure remote access.",
+    href: "https://seanwotherspoon.ca/notes/havenview-v1",
+    tech: ["FastAPI", "React", "WebRTC", "Docker", "PostgreSQL", "Redis", "Cloudflare"],
+    meta: "2025-present • self-hosted • used by my family",
+    hrefText: "Read case study",
+    imgSrc: "/projects/havenview.png",
+    imgAlt: "HavenView Raspberry Pi 5 internal architecture diagram showing Docker services, go2rtc, PostgreSQL, Redis, and storage.",
   },
 ];
 
