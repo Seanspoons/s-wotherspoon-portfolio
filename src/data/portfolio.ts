@@ -156,20 +156,12 @@ export const skillGroups: SkillGroup[] = [
 export const education = {
   school: "Simon Fraser University",
   degree: "Bachelor of Science in Computing Science",
-  period: "September 2021 – April 2027",
-  courses: [
-    "Data Structures & Algorithms",
-    "Database Systems",
-    "Computer Networking",
-    "Operating Systems",
-    "Systems Programming",
-    "Software Engineering",
-  ],
+  period: "September 2021 – April 2027 (Expected)",
 } as const;
 
 export const certification = {
-  title: "AWS Certified Solutions Architect – Associate (SAA-C03)",
-  period: "Issued 2025 • Valid through 2028",
+  title: "AWS Certified Solutions Architect – Associate",
+  period: "Issued August 2025",
   verificationUrl:
     "https://www.credly.com/badges/efcfddfd-eefa-4c77-a377-11a3f09edb88/public_url",
 } as const;

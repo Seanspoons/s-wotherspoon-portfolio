@@ -9,7 +9,7 @@ export default function Contact() {
             <div className="flex flex-col gap-1">
             <h2 className="text-lg font-semibold text-primary">Let’s talk</h2>
             <p className="text-sm text-slate-600">
-                Happy to connect about backend engineering, data systems, or cloud infrastructure. I usually respond fastest by email or LinkedIn.
+                I’m seeking new-graduate data engineering and backend/platform opportunities beginning in spring 2027. The best way to reach me is by email or LinkedIn.
             </p>
             </div>
 
