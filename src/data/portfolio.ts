@@ -51,7 +51,7 @@ export const profile = {
   headline:
     "Data engineer building reliable pipelines and backend systems.",
   introduction:
-    "I’m a former Samsung R&D data engineering co-op with experience shipping production Scala/Spark pipelines, Airflow workflows and internal data tooling. I’m seeking new-graduate data engineering and backend/platform roles beginning in spring 2027.",
+    "I completed a 12-month Data Engineering co-op at Samsung R&D Canada, where I shipped production Scala/Spark pipelines, Airflow workflows and internal data tooling. I’m seeking new-graduate data engineering and backend/platform roles beginning in spring 2027.",
 } as const;
 
 export const currentSnapshot: CurrentFocusItem[] = [
@@ -72,7 +72,7 @@ export const currentSnapshot: CurrentFocusItem[] = [
   },
   {
     title: "Availability",
-    summary: "April 2027 • Metro Vancouver or remote within Canada",
+    summary: "Spring 2027 • Metro Vancouver or remote within Canada",
     topics: "",
   },
 ];

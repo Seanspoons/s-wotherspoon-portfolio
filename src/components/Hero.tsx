@@ -4,7 +4,7 @@ import { currentSnapshot, profile } from "../data/portfolio";
 export default function Hero() {
   return (
     <Section reveal="mount">
-      <section className="grid gap-8 md:grid-cols-[1.15fr_0.85fr] items-center">
+      <section className="grid gap-8 md:grid-cols-[1.15fr_0.85fr] items-start">
         <div className="space-y-5">
           <p className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 rounded-full bg-accent/15 px-3 py-1 text-[11px] font-medium text-accent">
             <span>SFU Computing Science • Graduating April 2027</span>
