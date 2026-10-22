@@ -133,7 +133,7 @@ export const principles = [
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages",
-    items: ["Scala", "SQL", "Python", "Java", "TypeScript", "JavaScript"],
+    items: ["Scala", "SQL", "Python", "C++", "TypeScript", "JavaScript"],
   },
   {
     label: "Data Engineering",
