@@ -7,7 +7,7 @@ export default function Hero() {
       <section className="grid gap-8 md:grid-cols-[1.15fr_0.85fr] items-start">
         <div className="space-y-5">
           <p className="inline-flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 rounded-full bg-accent/15 px-3 py-1 text-[11px] font-medium text-accent">
-            <span>SFU Computing Science • Graduating April 2027</span>
+            <span>SFU Computing Science • Class of 2027</span>
           </p>
 
           <h1 className="text-3xl md:text-4xl font-semibold tracking-tight text-primary">

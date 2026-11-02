@@ -43,7 +43,7 @@ export const profile = {
   headline:
     "Data engineer building reliable pipelines and backend systems.",
   introduction:
-    "I completed a 12-month Data Engineering co-op at Samsung R&D Canada, where I shipped production Scala/Spark pipelines, Airflow workflows and internal data tooling. I’m seeking new-graduate data engineering and backend/platform roles beginning in spring 2027.",
+    "I completed a 12-month Data Engineering co-op at Samsung R&D Canada, where I shipped production Scala/Spark pipelines, Airflow workflows and internal data tooling. I'm exploring 2027 software engineering, data engineering and backend/platform opportunities, including new-graduate roles and internships.",
 } as const;
 
 export const currentSnapshot: CurrentFocusItem[] = [
@@ -64,7 +64,7 @@ export const currentSnapshot: CurrentFocusItem[] = [
   },
   {
     title: "Availability",
-    summary: "Spring 2027 • Metro Vancouver or remote within Canada",
+    summary: "2027 opportunities • Metro Vancouver or remote within Canada",
     topics: "",
   },
 ];
@@ -156,7 +156,7 @@ export const skillGroups: SkillGroup[] = [
 export const education = {
   school: "Simon Fraser University",
   degree: "Bachelor of Science in Computing Science",
-  period: "September 2021 – April 2027 (Expected)",
+  period: "September 2021 – 2027 (Expected)",
   location: "Burnaby, BC"
 } as const;
 
